@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import Container from '@/components/Container';
 
@@ -35,7 +34,7 @@ const Navbar = () => {
 					{/* SECTION 2 — Navigation */}
 					<nav className='hidden md:flex items-center gap-8'>
 						<Link
-							href='/WhoWeAre'
+							href='/who-we-are'
 							className='text-white text-[15px] hover:text-white/60 transition'
 						>
 							About Us
