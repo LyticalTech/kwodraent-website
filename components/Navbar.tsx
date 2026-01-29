@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Container from '@/components/Container';
 
-const Header = () => {
+const Navbar = () => {
 	return (
 		<header className='w-full bg-black border-b border-white/5'>
-			<div className='mx-auto px-4 sm:px-6 lg:px-6 xl:px-24 py-6'>
-				{/* MAIN ROW */}
-				<div className='flex items-center justify-between'>
+			<Container>
+				<div className='flex items-center justify-between py-6'>
 					{/* SECTION 1 — Logo & Name */}
 					<Link
 						href='/'
@@ -63,14 +63,14 @@ const Header = () => {
 					{/* SECTION 3 — Contact Button */}
 					<Link
 						href='#contact'
-						className='text-white text-[15px] bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded-md'
+						className='px-5 py-2 rounded-full bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition'
 					>
 						Contact Us
 					</Link>
 				</div>
-			</div>
+			</Container>
 		</header>
 	);
 };
 
-export default Header;
+export default Navbar;

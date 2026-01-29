@@ -1,11 +1,9 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Hero from '@/components/Hero';
+
 export default function Home() {
-  return (
-  <main className="h-full w-full border text-black">
-    <Navbar/>
-    <Footer/>
-   
-  </main>
-  );
+	return (
+		<main className='w-full text-black'>
+			<Hero />
+		</main>
+	);
 }
