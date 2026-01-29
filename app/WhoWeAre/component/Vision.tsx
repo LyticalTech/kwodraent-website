@@ -2,12 +2,29 @@ import React from 'react';
 import Image from 'next/image';
 import Container from '../../../components/Container';
 
-const Mission = () => {
+const Vision = () => {
 	return (
 		<section className='w-full py-20 bg-gray-50'>
 			<Container>
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+					{' '}
 					{/* LEFT SIDE */}
+					<div className='flex flex-col gap-6'>
+						<h2 className='text-base  text-black'>- Vision</h2>
+
+						<p className='text-xl font-semibold text-black/80'>Our Vision</p>
+						<div className='border-b border-black w-120 mt-2'></div>
+
+						<p className='text-black text-base leading-relaxed max-w-lg'>
+							Lead industry in innovations that advance modern living and a net-zero future.</p>
+
+						<ul className='space-y-3 text-sm text-black/60 mt-4'>
+							<li>Save 60-80% on monthly electricity bills</li>
+							<li>Use solar during day, grid power at night</li>
+							<li> Lowest cost option with fastest payback</li>
+						</ul>
+					</div>
+					{/* RIGHT SIDE */}
 					<div className='grid place-items-center'>
 						{/* Layered Grid */}
 						<div className='grid'>
@@ -38,28 +55,10 @@ const Mission = () => {
 							</div>
 						</div>
 					</div>
-
-					{/* RIGHT SIDE */}
-					<div className='flex flex-col gap-6'>
-						<h2 className='text-base  text-black'>- Mission</h2>
-
-						<p className='text-xl font-semibold text-black/80'>Our Purpose</p>
-						<div className='border-b border-black w-120 mt-2'></div>
-
-						<p className='text-black text-base leading-relaxed max-w-lg'>
-							Create sustainable solutions that improve quality of life and meet society&apos;s evolving needs.
-						</p>
-
-						<ul className='space-y-3 text-sm text-black/60 mt-4'>
-							<li>Save 60–80% on monthly electricity bills</li>
-							<li>Use solar during day, grid power at night</li>
-							<li> Lowest cost option with fastest payback</li>
-						</ul>
-					</div>
 				</div>
 			</Container>
 		</section>
 	);
 };
 
-export default Mission;
+export default Vision;
