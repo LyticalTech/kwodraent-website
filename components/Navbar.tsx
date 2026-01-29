@@ -14,7 +14,7 @@ const Navbar = () => {
 						href='/'
 						className='flex items-center gap-3'
 					>
-						<div className='w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-md flex items-center justify-center'>
+						<div className='w-10 h-10 bg-linear-to-br from-blue-500 to-blue-600 rounded-md flex items-center justify-center'>
 							<svg
 								className='w-6 h-6 text-white'
 								viewBox='0 0 24 24'
@@ -35,7 +35,7 @@ const Navbar = () => {
 					{/* SECTION 2 — Navigation */}
 					<nav className='hidden md:flex items-center gap-8'>
 						<Link
-							href='#about'
+							href='/WhoWeAre'
 							className='text-white text-[15px] hover:text-white/60 transition'
 						>
 							About Us
