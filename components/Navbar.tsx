@@ -40,19 +40,19 @@ const Navbar = () => {
 							About Us
 						</Link>
 						<Link
-							href='#solutions'
+							href='/what-we-do'
 							className='text-white text-[15px] hover:text-white/60 transition'
 						>
 							Solutions
 						</Link>
 						<Link
-							href='#subsidiaries'
+							href='/subsidiaries'
 							className='text-white text-[15px] hover:text-white/60 transition'
 						>
 							Subsidiaries
 						</Link>
 						<Link
-							href='#partnerships'
+							href='/partnerships'
 							className='text-white text-[15px] hover:text-white/60 transition'
 						>
 							Partnerships
@@ -61,7 +61,7 @@ const Navbar = () => {
 
 					{/* SECTION 3 — Contact Button */}
 					<Link
-						href='#contact'
+						href='/contact'
 						className='px-5 py-2 rounded-full bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition'
 					>
 						Contact Us
