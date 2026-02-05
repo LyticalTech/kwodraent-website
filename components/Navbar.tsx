@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import Container from '@/components/Container';
+import Image from 'next/image';
+
 
 const Navbar = () => {
 	return (
@@ -13,22 +15,7 @@ const Navbar = () => {
 						href='/'
 						className='flex items-center gap-3'
 					>
-						<div className='w-10 h-10 bg-linear-to-br from-blue-500 to-blue-600 rounded-md flex items-center justify-center'>
-							<svg
-								className='w-6 h-6 text-white'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								strokeWidth='2.5'
-							>
-								<path
-									d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'
-									strokeLinecap='round'
-									strokeLinejoin='round'
-								/>
-							</svg>
-						</div>
-						<span className='text-2xl font-normal text-white'>Kwo Draent</span>
+						<Image src='/kwodraent Logo White.png' height={34.2} width={135} alt='kwodraent'/>
 					</Link>
 
 					{/* SECTION 2 — Navigation */}

@@ -41,7 +41,10 @@ const Mission = () => {
 
 					{/* RIGHT SIDE */}
 					<div className='flex flex-col gap-6'>
-						<h2 className='text-base  text-black'>- Mission</h2>
+					<h1 className="flex items-center gap-3 text-base font-semibold text-black mb-6">
+            <span className="inline-block w-4 h-0.5 bg-blue-500" />{''}
+            Mission
+          </h1>
 
 						<p className='text-xl font-semibold text-black/80'>Our Purpose</p>
 						<div className='border-b border-black w-120 mt-2'></div>
