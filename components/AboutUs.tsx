@@ -7,17 +7,17 @@ const AboutUs = () => {
 		{
 			title: 'Who We Are',
 			image: '/whatwedo.avif',
-			link: '#solar',
+			link: '/',
 		},
 		{
 			title: 'What We Do',
 			image: '/whoweare.avif',
-			link: '#storage',
+			link: '/',
 		},
 		{
 			title: 'Sustainability & Safety',
 			image: '/safety.avif',
-			link: '#consulting',
+			link: '/',
 		},
 	];
 

@@ -1,31 +1,114 @@
-import React from 'react';
+'use client';
+
+import { motion, Variants } from 'framer-motion';
 import Container from '@/components/Container';
 
 const CTASection = () => {
-	return (
-		<section className='w-full bg-blue-600 py-32'>
-			<Container>
-				<div className=' w-400 flex flex-col items-center text-center max-w-3xl mx-auto'>
-					<h1 className='text-5xl font-semibold lg:text-5xl text-white leading-tight'>Discover The Kwo Draent Advantage</h1>
+	// Animation variants
+	const containerVariants: Variants = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.2,
+				delayChildren: 0.1,
+			},
+		},
+	};
 
-					<p className=' w-170 mt-6 text-white/90 text-sm lg:text-lg'>
+	const itemVariants: Variants = {
+		hidden: { opacity: 0, y: 20 },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 0.6,
+				ease: [0.22, 1, 0.36, 1] as const,
+			},
+		},
+	};
+
+	const buttonVariants: Variants = {
+		hidden: { opacity: 0, scale: 0.9 },
+		visible: {
+			opacity: 1,
+			scale: 1,
+			transition: {
+				duration: 0.5,
+				ease: [0.22, 1, 0.36, 1] as const,
+			},
+		},
+		hover: {
+			scale: 1.05,
+			transition: {
+				duration: 0.3,
+				ease: 'easeOut',
+			},
+		},
+		tap: {
+			scale: 0.98,
+		},
+	};
+
+	return (
+		<section className='w-full bg-blue-600 py-16 md:py-24 lg:py-32 overflow-hidden'>
+			<Container>
+				<motion.div
+					className='flex flex-col items-center text-center max-w-3xl mx-auto px-4'
+					variants={containerVariants}
+					initial='hidden'
+					whileInView='visible'
+					viewport={{ once: true, margin: '-100px' }}
+				>
+					{/* Heading */}
+					<motion.h1
+						className='text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight'
+						variants={itemVariants}
+					>
+						Discover The Kwo Draent Advantage
+					</motion.h1>
+
+					{/* Description */}
+					<motion.p
+						className='mt-4 md:mt-6 text-white/90 text-base md:text-lg max-w-2xl'
+						variants={itemVariants}
+					>
 						Get a personalized estimate in minutes. Our solar calculator uses your actual usage to show real savings potential.
-					</p>
+					</motion.p>
 
 					{/* Buttons */}
-					<div className='mt-10 flex items-center gap-6'>
-						<a href='#calculate'>
-							<button className='px-8 py-3 bg-white text-blue-600 rounded-full font-medium transition hover:bg-black hover:text-white'>
+					<motion.div
+						className='mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto'
+						variants={itemVariants}
+					>
+						<a
+							href='/contact'
+							className='w-full sm:w-auto'
+						>
+							<motion.button
+								className='w-full sm:w-auto px-6 md:px-8 py-3 bg-white text-blue-600 rounded-full font-medium transition-colors hover:bg-black hover:text-white'
+								variants={buttonVariants}
+								whileHover='hover'
+								whileTap='tap'
+							>
 								Calculate Your Energy
-							</button>
+							</motion.button>
 						</a>
-						<a href='#solutions'>
-							<button className='px-8 py-3 border border-white text-white rounded-full font-medium transition hover:bg-black hover:text-white'>
+						<a
+							href='/what-we-do'
+							className='w-full sm:w-auto'
+						>
+							<motion.button
+								className='w-full sm:w-auto px-6 md:px-8 py-3 border border-white text-white rounded-full font-medium transition-colors hover:bg-black hover:text-white'
+								variants={buttonVariants}
+								whileHover='hover'
+								whileTap='tap'
+							>
 								Explore Solutions
-							</button>
+							</motion.button>
 						</a>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 			</Container>
 		</section>
 	);

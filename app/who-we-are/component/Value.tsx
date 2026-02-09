@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import { motion } from 'framer-motion';
 
 const Value = () => {
 	const items = [
@@ -30,24 +32,53 @@ const Value = () => {
 	];
 
 	return (
-		<section className='w-full py-20 bg-black '>
+		<section className='w-full py-20 bg-black'>
 			<div className='mx-auto max-w-7xl px-6'>
-				<h1 className='text-4xl font-bold text-white mb-12 text-left'>Our Core Values</h1>
+				<motion.h1
+					className='text-4xl font-bold text-white mb-12 text-left'
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: '-100px' }}
+					transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+				>
+					Our Core Values
+				</motion.h1>
+
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
-					{items.map((item) => (
-						<div
+					{items.map((item, index) => (
+						<motion.div
 							key={item.number}
-							className='border border-black/10 rounded-xl p-8 flex flex-col gap-4'
+							className=' p-8 flex flex-col gap-4'
+							initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true, margin: '-100px' }}
+							transition={{
+								duration: 0.6,
+								delay: index * 0.1,
+								ease: [0.22, 1, 0.36, 1],
+							}}
 						>
 							{/* Number Tag */}
-							<span className='text-2xl bg-blue-500 w-12 h-12 text-center rounded-xl p-1 font-semibold text-white'>{item.number}</span>
+							<motion.span
+								className='text-2xl bg-blue-500 w-12 h-12 text-center rounded-xl p-1 font-semibold text-white'
+								initial={{ scale: 0 }}
+								whileInView={{ scale: 1 }}
+								viewport={{ once: true, margin: '-100px' }}
+								transition={{
+									duration: 0.5,
+									delay: index * 0.1 + 0.2,
+									ease: [0.22, 1, 0.36, 1],
+								}}
+							>
+								{item.number}
+							</motion.span>
 
 							{/* Title */}
 							<h1 className='text-xl font-semibold text-white'>{item.title}</h1>
 
 							{/* Description */}
 							<p className='text-white/70 text-xl leading-relaxed'>{item.text}</p>
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>
