@@ -2,6 +2,7 @@
 import { useRef } from 'react';
 import Container from './Container';
 import { motion, useInView } from 'framer-motion';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const Discover = () => {
 	const ref = useRef(null);
@@ -9,19 +10,16 @@ const Discover = () => {
 
 	const stats = [
 		{
-			title: 'Higher Lead Volume',
-			description: 'Scaled from 100 to 300 qualified leads in 60 days.',
-			percent: '3X',
+			description: 'reduction in time spent on translations',
+			percent: '90%',
 		},
 		{
-			title: 'Increase in CTR',
-			description: 'Optimized creative testing and ad placement for best results.',
-			percent: '+180%',
+			description: 'reduction in translation workload and productivity recapture',
+			percent: '50%',
 		},
 		{
-			title: 'Conversion Rate',
-			description: 'Through data-backed landing page optimization.',
-			percent: '+60%',
+			description: 'return on investment',
+			percent: '345%',
 		},
 	];
 
@@ -80,7 +78,7 @@ const Discover = () => {
 					variants={containerVariants}
 					initial='hidden'
 					animate={isInView ? 'visible' : 'hidden'}
-					className='grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-6 lg:gap-12 items-start'
+					className='flex flex-row gap-4 items-center justify-between flex-wrap'
 				>
 					{/* Left Column — Heading */}
 					<motion.div
@@ -89,40 +87,52 @@ const Discover = () => {
 					>
 						<h2 className='text-base flex items-center gap-2 '>
 							{' '}
-							<div className='w-4 h-1 bg-blue-500'></div> Discover Kwo Draent
+							<div className='w-4 h-1 bg-blue-500'></div>
+							Who We Are
 						</h2>
 					</motion.div>
 
 					{/* Right Column — Description + Stats */}
-					<div className='space-y-12'>
-						{/* Description */}
+					<div className='flex flex-col items-start gap-3'>
 						<motion.p
 							variants={itemVariants}
-							className='text-2xl leading-relaxed text-black  font-bold'
+							className='text-4xl  text-black max-w-xl'
 						>
-							We create and deploy the technology and systems needed to simultaneously reduce emissions while meeting the world’s
-							growing energy demands, ensuring progress for people and the planet, on the journey to net zero and beyond.
+							A global joint venture to expand the frontiers of subsea. Kwo Draent will expand the frontiers of subsea to drive a
+							sustainable energy future.
 						</motion.p>
+
+						<motion.p
+							variants={itemVariants}
+							className='text-sm text-black leading-relaxed max-w-lg'
+						>
+							Businesses using our services see significant efficiency improvements and cost savings.
+						</motion.p>
+
+						<motion.a
+							variants={itemVariants}
+							href='#'
+							className='inline-flex items-center gap-2 text-blue-500 font-medium'
+						>
+							Learn more <GoArrowUpRight className='text-blue-500' />
+						</motion.a>
 
 						{/* Stats Grid */}
 						<motion.div
 							variants={containerVariants}
-							className='grid grid-cols-1 md:grid-cols-3 gap-8'
+							className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'
 						>
 							{stats.map((stat) => (
 								<motion.div
-									key={stat.title}
+									key={stat.percent}
 									variants={statCardVariants}
-									whileHover={{
-										y: -8,
-										transition: { duration: 0.3 },
-									}}
-									className='bg-gray-50 rounded-xl shadow-lg p-6 flex flex-col justify-between h-full'
+									whileHover={{ y: -8, transition: { duration: 0.3 } }}
+									className='p-6 flex flex-col justify-between h-full  border-l-2 border-gray-300'
 								>
 									<div>
-										<p className='text-3xl  text-black font-semibold'>{stat.percent}</p>
-										<h3 className='text-xl  text-black mt-2'>{stat.title}</h3>
-										<p className='mt-24 text-black text-sm'>{stat.description}</p>
+										<p className='text-5xl  text-black'>{stat.percent}</p>
+
+										<p className='mt-4 text-ms text-black'>{stat.description}</p>
 									</div>
 								</motion.div>
 							))}

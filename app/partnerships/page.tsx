@@ -8,8 +8,6 @@ export default function Partnership() {
 			<Hero />
             <CTASection/>
             <ImageCards/>
-         
-
 		</main>
 	);
 }

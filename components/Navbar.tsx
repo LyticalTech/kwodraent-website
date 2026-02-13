@@ -17,7 +17,8 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className='w-full bg-black border-b border-white/5 overflow-x-hidden'>
+		<header className='w-full bg-white border-b border-black/10 relative z-50'>
+
 			<Container>
 				<div className='flex items-center justify-between py-4 md:py-6'>
 					{/* SECTION 1 — Logo & Name */}
@@ -27,7 +28,7 @@ const Navbar = () => {
 						onClick={closeMenu}
 					>
 						<Image
-							src='/kwodraent Logo White.png'
+							src='/kwodraent Logo Black.png'
 							height={34.2}
 							width={135}
 							alt='kwodraent'
@@ -37,27 +38,68 @@ const Navbar = () => {
 
 					{/* SECTION 2 — Navigation (Desktop) */}
 					<nav className='hidden md:flex items-center gap-8'>
-						<Link
-							href='/who-we-are'
-							className='text-white text-[15px] hover:text-white/60 transition'
-						>
-							About Us
-						</Link>
+						{/* WHO WE ARE DROPDOWN */}
+						<div className='relative group'>
+							<button className='text-black text-[15px] hover:text-gray-500 transition flex items-center gap-1'>
+								Who We Are
+								<svg
+									className='w-3 h-3 mt-[2px]'
+									viewBox='0 0 20 20'
+									fill='currentColor'
+								>
+									<path
+										fillRule='evenodd'
+										d='M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z'
+										clipRule='evenodd'
+									/>
+								</svg>
+							</button>
+
+							{/* Dropdown */}
+							<div className='absolute left-0 top-full mt-3 w-30 bg-black rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-3 z-[999]'>
+
+								<Link
+									href='/who-we-are'
+									className='block px-5 py-2 text-white hover:text-gray-300'
+								>
+									About Us
+								</Link>
+								<Link
+									href='/values'
+									className='block px-5 py-2 text-white hover:text-gray-300'
+								>
+									Values
+								</Link>
+								<Link
+									href='/leadership'
+									className='block px-5 py-2 text-white hover:text-gray-300'
+								>
+									Leadership
+								</Link>
+								<Link
+									href='/compliance'
+									className='block px-5 py-2 text-white hover:text-gray-300'
+								>
+									Compliance
+								</Link>
+							</div>
+						</div>
+
 						<Link
 							href='/what-we-do'
-							className='text-white text-[15px] hover:text-white/60 transition'
+							className='text-black text-[15px] hover:text-gray-500 transition'
 						>
-							Solutions
+							What We Do
 						</Link>
 						<Link
 							href='/subsidiaries'
-							className='text-white text-[15px] hover:text-white/60 transition'
+							className='text-black text-[15px] hover:text-gray-500 transition'
 						>
 							Subsidiaries
 						</Link>
 						<Link
 							href='/partnerships'
-							className='text-white text-[15px] hover:text-white/60 transition'
+							className='text-black text-[15px] hover:text-gray-500 transition'
 						>
 							Partnerships
 						</Link>
@@ -66,7 +108,7 @@ const Navbar = () => {
 					{/* SECTION 3 — Contact Button (Desktop) */}
 					<Link
 						href='/contact'
-						className='hidden md:block px-5 py-2 rounded-full bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition flex-shrink-0'
+						className='hidden md:block px-5 py-2 rounded-2xl bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition flex-shrink-0'
 					>
 						Contact Us
 					</Link>
