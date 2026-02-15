@@ -1,13 +1,22 @@
+
+import CTASection from "@/components/CTASection";
+import ServicesSection from "./component/ ServicesSection";
+import Approach from "./component/Approach";
+import Categories from "./component/Categories";
 import Hero from "./component/Hero";
-import Solutions from "./component/Solutions";
-import AboutUs from '@/components/AboutUs';
+import ImageSection from "./component/ImageSection";
 
 export default function AboutUS() {
 	return (
 		<main className='w-full text-black'>
             <Hero />
-            <Solutions />
-			<AboutUs/>
+			<ServicesSection />
+			<Categories/>
+			<Approach/>
+			
+            
+			<ImageSection/>
+			<CTASection/>
 			
 			
 			

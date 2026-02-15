@@ -7,7 +7,7 @@ export default function Partnership() {
 		<main className='w-full text-black'>
 			<Hero />
             <CTASection/>
-            <ImageCards/>
+            
 		</main>
 	);
 }

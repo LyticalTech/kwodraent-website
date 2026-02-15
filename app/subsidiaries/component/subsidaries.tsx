@@ -1,111 +1,148 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Container from '../../../components/Container';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BoltIcon } from '@heroicons/react/24/outline';
 
-const items = [
-	{
-		id: 'solar',
-		title: 'Xastra',
-		desc: 'Zero upfront costs. Choose from rental options or low-interest loans that fit your budget.',
-	},
-	{
-		id: 'battery',
-		title: 'Kwo Draent Energy',
-		desc: 'Certified professionals using premium equipment. Installation guaranteed by our experienced technical team.',
-	},
-	{
-		id: 'grid',
-		title: 'Schiste Integrated Energy Services',
-		desc: 'Environmentally responsible manufacturing. Solar system energy that truly helps the planet.',
-	},
-	{
-		id: 'monitoring',
-		title: 'Leden Energy Ltd',
-		desc: '25-year performance warranty on all systems. Your investment is protected for decades of reliable clean energy.',
-	},
-	{
-		id: 'scale',
-		title: 'SWAPS Synergy Lts',
-		desc: 'Zero upfront costs. Choose from rental options or low-interest loans that fit your budget.',
-	},
-	{
-		id: 'savings',
-		title: 'Lytical Technologies',
-		desc: 'Certified professionals using premium equipment. Installation guaranteed by our experienced technical team.',
-	},
-	{
-		id: 'custom',
-		title: 'Meta Mincrest',
-		desc: 'Environmentally responsible manufacturing. Solar system energy that truly helps the planet.',
-	},
-	{
-		id: 'sustainability',
-		title: 'Potentis Energy Ltd',
-		desc: '25-year performance warranty on all systems. Your investment is protected for decades of reliable clean energy.',
-	},
+const cards = [
+  {
+    id: 1,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'Kwo Draent Energy',
+    description:
+      'Unlimited website design requests with fast delivery, ensuring your brand stays modern and professional.',
+    image: '/assets/KD group 1.png',
+    link: '/',
+  },
+  {
+    id: 2,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'Xastra',
+    description:
+      'Unlimited development tasks, bug fixes, and updates to keep your website fast, secure and scalable.',
+    image: '/assets/KD group 2.png',
+    link: '/',
+  },
+  {
+    id: 3,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'Schiste Intergrated Energy services',
+    description:
+      'Continous branding support with unlimited request for logos, guidelines and visual identity updates.',
+    image: '/assets/KD group 3.png',
+    link: '/',
+  },
+  {
+    id: 4,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'Leden Energy',
+    description:
+      'Unlimited ad creatives, social media designs and campaign visuals delivered fast and on brand.',
+    image: '/assets/KDgroup4.png',
+    link: '/',
+  },
+  {
+    id: 5,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'Lytical Technologies',
+    description:
+      'Unlimited UI/UX design requests with ongoing improvements for web apps, dashboards and digital products.',
+    image: '/assets/KD group 5.png',
+    link: '/',
+  },
+  {
+    id: 6,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'SWAPS Synergy Ltd',
+    description:
+      'Ongoing e-commerce design and development with unlimited requests for updates and improvements.',
+    image: '/assets/KD group 6.jpg',
+    link: '/',
+  },
+  {
+    id: 7,
+    icon: '/assets/Lytical Darkmode.png',
+    subtitle: 'Meta Mincrest',
+    description:
+      'Unlimited website design requests with fast delivery, ensuring your brand stays modern and professional.',
+    image: '/assets/KD group 7.jpg',
+    link: '/',
+  },
 ];
 
 const Subsidaries = () => {
-	return (
-		<section className='bg-white py-32'>
-			<Container>
-				<h1 className='flex items-center gap-3 text-base font-semibold text-black mb-6'>
-					<span className='inline-block w-4 h-0.5 bg-blue-500' />
-					{''}
-					Subsidiaries
-				</h1>
+  return (
+    <section className="bg-black py-16 md:py-24">
+      <Container>
 
-				<div className='flex w-full flex-col md:flex-row items-start md:items-start gap-4 md:gap-0'>
-					<motion.h2
-						className='text-black text-2xl md:text-5xl font-semibold'
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-					>
-						Copy on Subsidiaries
-					</motion.h2>
-					<motion.p
-						className='text-black text-sm md:text-base md:ml-auto md:max-w-md'
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-					>
-						Brief copy on subsidiaries. Brief copy on subsidiaries. Brief copy on subsidiaries. Brief copy on subsidiaries. Brief
-						copy on subsidiaries.
-					</motion.p>
-				</div>
+        {/* TOP SECTION RESPONSIVE */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-10">
+          <h1 className="flex items-center gap-3 text-sm md:text-base font-semibold text-white">
+            <span className="inline-block w-4 h-0.5 bg-blue-500" />
+            The Kwo Draent Group
+          </h1>
 
-				<div className='relative mt-16 w-full h-48 rounded-2xl overflow-hidden'>
-					<Image
-						src='/OILRIG.avif'
-						alt='Oil rig'
-						fill
-						className='object-cover'
-					/>
-				</div>
+          <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-3xl leading-relaxed">
+            Explore Orix services designed to elevate brands. From creative design to digital solutions, we craft impactful results that drive growth.
+          </p>
+        </div>
 
-				<div className='mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
-					{items.map((item) => (
-						<div
-							key={item.id}
-							className='p-6 transition hover:-translate-y-1 hover:shadow-xl'
-						>
-							<div className='w-10 h-10 flex items-center justify-center rounded-lg bg-blue-50 mb-4'>
-								<BoltIcon className='w-6 h-6 text-blue-600' />
-							</div>
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-20">
+          {cards.map((card) => (
+            <Link
+              key={card.id}
+              href={card.link}
+              className="group relative rounded-2xl overflow-hidden bg-neutral-900 min-h-[320px] md:min-h-[380px] flex flex-col justify-end p-6"
+            >
+              {/* BG IMAGE */}
+              <Image
+                src={card.image}
+                alt={card.subtitle}
+                fill
+                className="object-cover opacity-0 group-hover:opacity-100 transition duration-500"
+              />
 
-							<h3 className='mt-2 text-lg font-semibold text-black'>{item.title}</h3>
+              {/* DARK OVERLAY */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-							<p className='mt-2 text-gray-600 text-sm'>{item.desc}</p>
-						</div>
-					))}
-				</div>
-			</Container>
-		</section>
-	);
+              {/* SMALL ICON */}
+              <div className="absolute top-5 left-5 z-20 text-white">
+                <BoltIcon className="w-5 h-5 md:w-6 md:h-6" />
+              </div>
+
+              {/* COMPANY LOGO */}
+              <div className="relative z-20 mb-3">
+                <Image
+                  src={card.icon}
+                  alt="company"
+                  width={100}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+
+              {/* TEXT */}
+              <div className="relative z-20">
+                <h2 className="text-base md:text-lg font-semibold text-white">
+                  {card.subtitle}
+                </h2>
+
+                <p className="text-xs md:text-sm mt-2 text-gray-300 leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+
+              {/* BASE BG */}
+              <div className="absolute inset-0 bg-neutral-900 group-hover:opacity-0 transition duration-500" />
+            </Link>
+          ))}
+        </div>
+
+      </Container>
+    </section>
+  );
 };
 
 export default Subsidaries;

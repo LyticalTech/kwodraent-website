@@ -46,7 +46,7 @@ const Description= () => {
 
 							{/* Title + Button */}
 							<div className='mt-6'>
-								<h3 className='text-xl font-semibold'>{card.title}</h3>
+								<h3 className='text-xl '>{card.title}</h3>
 
 								<span className='inline-block mt-4 px-5 py-2 text-sm bg-blue-600 text-white rounded-full'>Read More</span>
 							</div>

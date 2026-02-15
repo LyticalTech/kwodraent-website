@@ -1,89 +1,141 @@
 'use client';
 
+import Container from '@/components/Container';
 import { motion } from 'framer-motion';
+import { GoArrowUpRight } from "react-icons/go";
 
 const Value = () => {
-	const items = [
-		{
-			number: '01',
-			title: 'Expertise',
-			text: 'Deep understanding of the systems we operate in. We know the work, the risks, and have access to the local market.',
-		},
-		{
-			number: '02',
-			title: 'Collaboration',
-			text: 'Use our free online calculator to see how much solar can save you based on your current electricity bills.',
-		},
-		{
-			number: '03',
-			title: 'Execution Certainty',
-			text: 'We pursue high standards in execution, engineering, and delivery. Work is done thoroughly, correctly, and to specification.',
-		},
-		{
-			number: '04',
-			title: 'Integrity',
-			text: 'Use our free online calculator to see how much solar can save you based on your current electricity bills.',
-		},
-		{
-			number: '05',
-			title: 'Innovation',
-			text: 'Use our free online calculator to see how much solar can save you based on your current electricity bills.',
-		},
-	];
+  return (
+    <>
+      {/* ================= BLACK SECTION ================= */}
+      <section className="w-full py-24 bg-black">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
-	return (
-		<section className='w-full py-20 bg-black'>
-			<div className='mx-auto max-w-7xl px-6'>
-				<motion.h1
-					className='text-4xl font-bold text-white mb-12 text-left'
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, margin: '-100px' }}
-					transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-				>
-					Our Core Values
-				</motion.h1>
+            {/* MISSION */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-8"
+            >
+              <h2 className="text-sm text-white flex items-center gap-3 uppercase tracking-wider">
+                <div className="w-6 h-[2px] bg-blue-500" />
+                Mission
+              </h2>
 
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
-					{items.map((item, index) => (
-						<motion.div
-							key={item.number}
-							className=' p-8 flex flex-col gap-4'
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true, margin: '-100px' }}
-							transition={{
-								duration: 0.6,
-								delay: index * 0.1,
-								ease: [0.22, 1, 0.36, 1],
-							}}
-						>
-							{/* Number Tag */}
-							<motion.span
-								className='text-2xl bg-blue-500 w-12 h-12 text-center rounded-xl p-1 font-semibold text-white'
-								initial={{ scale: 0 }}
-								whileInView={{ scale: 1 }}
-								viewport={{ once: true, margin: '-100px' }}
-								transition={{
-									duration: 0.5,
-									delay: index * 0.1 + 0.2,
-									ease: [0.22, 1, 0.36, 1],
-								}}
-							>
-								{item.number}
-							</motion.span>
+              <h3 className="text-white text-4xl font-semibold">
+                Our Mission
+              </h3>
 
-							{/* Title */}
-							<h1 className='text-xl font-semibold text-white'>{item.title}</h1>
+              <div className="w-full h-[2px] bg-white/20" />
 
-							{/* Description */}
-							<p className='text-white/70 text-xl leading-relaxed'>{item.text}</p>
-						</motion.div>
-					))}
-				</div>
-			</div>
-		</section>
-	);
+              <p className="text-white text-base leading-relaxed max-w-xl">
+                Create sustainable solutions that improve quality of life
+                and meet society's evolving needs.
+              </p>
+            </motion.div>
+
+            {/* VISION */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-8"
+            >
+              <h2 className="text-sm text-white flex items-center gap-3 uppercase tracking-wider">
+                <div className="w-6 h-[2px] bg-blue-500" />
+                Vision
+              </h2>
+
+              <h3 className="text-white text-4xl font-semibold">
+                Our Vision
+              </h3>
+
+              <div className="w-full h-[2px] bg-white/20" />
+
+              <p className="text-white text-base leading-relaxed max-w-xl">
+                To become a global leader in innovative and sustainable
+                solutions that shape the future of industries and communities.
+              </p>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+
+      {/* ================= CORE VALUES SECTION ================= */}
+<section className="w-full py-24 bg-black">
+  <Container>
+    {/* 3 column grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 items-start">
+
+      {/* LEFT BIG (2/3 width) */}
+      <div className="flex flex-col gap-8 lg:col-span-2">
+        <h1 className="text-5xl font-semibold text-white leading-tight max-w-xl">
+          Our Core Values
+        </h1>
+
+        <img
+          src="/assets/KD group 5.png"
+          alt="core values"
+          className="w-full h-[520px] object-cover rounded-2xl"
+        />
+      </div>
+
+      {/* RIGHT CARDS (1/3 width) */}
+      <div className="flex flex-col gap-6">
+
+        {/* CARD 1 */}
+        <div className="p-2">
+          <span className="text-blue-500 text-3xl font-semibold">.01</span>
+          <h3 className="text-xl font-semibold text-white mt-2 mb-2">
+            Smart Automation
+          </h3>
+          <p className="text-gray-300 leading-relaxed">
+            Set things in motion with just a few steps. No endless forms,
+            no clutter, just a clean start that gets you moving fast.
+          </p>
+        </div>
+
+        {/* CARD 2 */}
+        <div className="p-2">
+          <span className="text-blue-500 text-3xl font-semibold">.02</span>
+          <h3 className="text-xl font-semibold text-white mt-2 mb-2">
+            Seamless Collaboration
+          </h3>
+          <p className="text-gray-300 leading-relaxed">
+            Bring everyone on the same page instantly. Our system adapts
+            to your workflow, not the other way around.
+          </p>
+        </div>
+
+        {/* CARD 3 */}
+        <div className="p-2">
+          <span className="text-blue-500 text-3xl font-semibold">.03</span>
+          <h3 className="text-xl font-semibold text-white mt-2 mb-2">
+            Scalable Growth
+          </h3>
+          <p className="text-gray-300 leading-relaxed">
+            Once you're in, everything expands seamlessly. One place,
+            one system, zero resistance.
+          </p>
+        </div>
+
+        {/* BUTTON */}
+        <button className="mt-6 w-fit bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition flex items-center gap-2">
+          Explore More <GoArrowUpRight />
+        </button>
+
+      </div>
+    </div>
+  </Container>
+</section>
+
+    </>
+  );
 };
 
 export default Value;
