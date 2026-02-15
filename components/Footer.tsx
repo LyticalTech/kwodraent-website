@@ -40,11 +40,13 @@ const Footer = () => {
 							{/* NAV */}
 							<nav className='flex flex-col space-y-3 md:pt-1'>
 								{[
-									['Home', '#home'],
-									['Who We Are', '#who-we-are'],
-									['What We Do', '#what-we-do'],
-									['Sustainability', '#sustainability'],
-									['Contact Us', '#contact'],
+									
+									['Who We Are', '/who-we-are'],
+									['What We Do', '/what-we-do'],
+									['Subsidiaries','/subsidiaries'],
+									['Partnerships', '/partnerships'],
+									['Compliance', '/compliance'],
+									['Contact Us', '/contact'],
 								].map(([label, href]) => (
 									<Link
 										key={label}
@@ -59,16 +61,9 @@ const Footer = () => {
 							{/* ADDRESS + SOCIAL */}
 							<div className='space-y-8 md:pt-1'>
 								<div>
-									<h3 className='text-white font-semibold text-[15px] mb-2'>Global Headquarters</h3>
+									<h3 className='text-white font-semibold text-[15px] mb-2'>Headquarters</h3>
 									<address className='not-italic text-white/80 text-[15px] leading-relaxed'>
-										1234 Conductor Way, Mableton, Georgia, USA
-									</address>
-								</div>
-
-								<div>
-									<h3 className='text-white font-semibold text-[15px] mb-2'>Africa Headquarters</h3>
-									<address className='not-italic text-white/80 text-[15px] leading-relaxed'>
-										1B Ikogosi Close, Osborne Foreshore Estate, Ikoyi, Lagos, Nigeria
+										36 Jeremiah Ugwu Street Oak Estate, Lekki Phase 1 Lagos, Nigeria.
 									</address>
 								</div>
 

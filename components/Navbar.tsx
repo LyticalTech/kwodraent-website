@@ -58,13 +58,13 @@ const Navbar = () => {
 									About Us
 								</Link>
 								<Link
-									href='/values'
+									href='/who-we-are'
 									className='block px-5 py-2 text-white hover:text-gray-300'
 								>
 									Values
 								</Link>
 								<Link
-									href='/leadership'
+									href='/who-we-are'
 									className='block px-5 py-2 text-white hover:text-gray-300'
 								>
 									Leadership
