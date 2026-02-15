@@ -44,7 +44,7 @@ const Hero = () => {
 			{/* BACKGROUND IMAGE */}
 			<div className='absolute inset-0 -z-10'>
 				<Image
-					src='/assets/Hero image.png' // put image inside public folder
+					src='/Hero image.webp' // put image inside public folder
 					alt='Solar background'
 					fill
 					priority

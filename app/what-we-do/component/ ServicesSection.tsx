@@ -74,7 +74,7 @@ const services = [
   {
     id: 8,
     title: 'Fabrication',
-    image: ' /assets/KD group 2.png',
+    image: ' /KD group 2.webp',
     heading: 'Ocean Freight',
     desc: 'Efficiently moving businesses forward: our seamless land transport solutions redefine reliability and convenience.',
     icon: Hammer,

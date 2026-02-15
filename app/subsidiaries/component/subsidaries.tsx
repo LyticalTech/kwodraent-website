@@ -21,7 +21,7 @@ const cards = [
     subtitle: 'Xastra',
     description:
       'Unlimited development tasks, bug fixes, and updates to keep your website fast, secure and scalable.',
-    image: '/assets/KD group 2.png',
+    image: '/KD group 2.webp',
     link: '/',
   },
   {
