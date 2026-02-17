@@ -17,7 +17,7 @@ const Footer = () => {
 								className='flex items-center gap-3'
 							>
 								<Image
-									src='/kwodraent Logo White.png'
+									src='/Kwodraent Logo White.png'
 									height={34.2}
 									width={135}
 									alt='kwodraent'

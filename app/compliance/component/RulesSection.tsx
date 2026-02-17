@@ -75,7 +75,7 @@ const RulesSection = () => {
               <button
                 key={item.id}
                 onClick={() => handleClick(index)}
-                className='flex flex-col items-center justify-center py-6 px-4 relative group'
+                className='flex flex-col items-center justify-center py-6 px-4 relative group cursor-pointer'
               >
                 <h4 className={`font-semibold text-sm transition ${active === index ? 'text-black' : 'text-gray-400'}`}>
                   {item.title}
@@ -83,7 +83,7 @@ const RulesSection = () => {
 
                 <div
                   className={`absolute bottom-0 left-0 h-[2px] w-full transition-all duration-500
-                  ${active === index ? 'bg-blue-600' : 'bg-gray-300 group-hover:bg-red-400'}`}
+                  ${active === index ? 'bg-blue-600' : 'bg-gray-300 group-hover:bg-blue-400'}`}
                 />
               </button>
             ))}

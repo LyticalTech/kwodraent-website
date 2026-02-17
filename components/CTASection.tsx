@@ -51,66 +51,69 @@ const CTASection = () => {
 	};
 
 	return (
-		<section className='w-full bg-blue-600 py-16 md:py-24 lg:py-32 overflow-hidden'>
-			<Container>
-				<motion.div
-					className='flex flex-col items-center text-center max-w-3xl mx-auto px-4'
-					variants={containerVariants}
-					initial='hidden'
-					whileInView='visible'
-					viewport={{ once: true, margin: '-100px' }}
-				>
-					{/* Heading */}
-					<motion.h1
-						className='text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight'
-						variants={itemVariants}
-					>
-						Discover The Kwo Draent Advantage
-					</motion.h1>
+<section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden">
 
-					{/* Description */}
-					<motion.p
-						className='mt-4 md:mt-6 text-white/90 text-base md:text-lg max-w-2xl'
-						variants={itemVariants}
-					>
-						Get a personalized estimate in minutes. Our solar calculator uses your actual usage to show real savings potential.
-					</motion.p>
+{/* Background image */}
+<div
+  className="absolute inset-0 bg-cover bg-center"
+  style={{
+	backgroundImage: "url('/footer.png')", // put image in public/images
+  }}
+/>
 
-					{/* Buttons */}
-					<motion.div
-						className='mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto'
-						variants={itemVariants}
-					>
-						<a
-							href='/contact'
-							className='w-full sm:w-auto'
-						>
-							<motion.button
-								className='w-full sm:w-auto px-6 md:px-8 py-3 bg-white text-blue-600 rounded-full font-medium transition-colors hover:bg-black hover:text-white'
-								variants={buttonVariants}
-								whileHover='hover'
-								whileTap='tap'
-							>
-								Calculate Your Energy
-							</motion.button>
-						</a>
-						<a
-							href='/what-we-do'
-							className='w-full sm:w-auto'
-						>
-							<motion.button
-								className='w-full sm:w-auto px-6 md:px-8 py-3 border border-white text-white rounded-full font-medium transition-colors hover:bg-black hover:text-white'
-								variants={buttonVariants}
-								whileHover='hover'
-								whileTap='tap'
-							>
-								Explore Solutions
-							</motion.button>
-						</a>
-					</motion.div>
-				</motion.div>
-			</Container>
-		</section>
+{/* Dark overlay */}
+<div className="absolute inset-0 bg-black/50" />
+
+{/* Content */}
+<div className="relative z-10">
+  <Container>
+	<motion.div
+	  className="flex flex-col items-center text-center max-w-3xl mx-auto px-4"
+	  variants={containerVariants}
+	  initial="hidden"
+	  whileInView="visible"
+	  viewport={{ once: true, margin: '-100px' }}
+	>
+	  {/* Heading */}
+	  <motion.h1
+		className="text-3xl sm:text-4xl md:text-5xl text-white leading-tight"
+		variants={itemVariants}
+	  >
+		Discover The Kwo Draent Advantage
+	  </motion.h1>
+
+	  {/* Buttons */}
+	  <motion.div
+		className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto"
+		variants={itemVariants}
+	  >
+		<a href="/contact" className="w-full sm:w-auto">
+		  <motion.button
+			className="w-full sm:w-auto px-6 md:px-8 py-3 bg-white text-blue-600 rounded-full font-medium transition-colors hover:bg-black hover:text-white"
+			variants={buttonVariants}
+			whileHover="hover"
+			whileTap="tap"
+		  >
+			Learn About Us
+		  </motion.button>
+		</a>
+
+		<a href="/what-we-do" className="w-full sm:w-auto">
+		  <motion.button
+			className="w-full sm:w-auto px-6 md:px-8 py-3 border border-white text-white rounded-full font-medium transition-colors hover:bg-black hover:text-white"
+			variants={buttonVariants}
+			whileHover="hover"
+			whileTap="tap"
+		  >
+			Explore Solutions
+		  </motion.button>
+		</a>
+	  </motion.div>
+	</motion.div>
+  </Container>
+</div>
+</section>
+
 	);
 };
 

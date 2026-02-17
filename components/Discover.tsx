@@ -123,19 +123,25 @@ const Discover = () => {
 							className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'
 						>
 							{stats.map((stat) => (
-								<motion.div
-									key={stat.percent}
-									variants={statCardVariants}
-									whileHover={{ y: -8, transition: { duration: 0.3 } }}
-									className='p-6 flex flex-col justify-between h-full  border-l-2 border-gray-300'
-								>
-									<div>
-										<p className='text-5xl  text-black'>{stat.percent}</p>
+  <motion.div
+    key={stat.percent}
+    variants={statCardVariants}
+    whileHover={{ y: -8, transition: { duration: 0.3 } }}
+    className="p-6 flex flex-col justify-between h-full relative bg-white"
+  >
+    {/* Short vertical line */}
+    <div className="absolute left-0 top-6 bottom-6 w-[2px] bg-gray-300" />
 
-										<p className='mt-4 text-ms text-black'>{stat.description}</p>
-									</div>
-								</motion.div>
-							))}
+    <div className="pl-4">
+      <p className="text-5xl text-black">{stat.percent}</p>
+
+      <p className="mt-4 text-sm text-black">
+        {stat.description}
+      </p>
+    </div>
+  </motion.div>
+))}
+
 						</motion.div>
 					</div>
 				</motion.div>

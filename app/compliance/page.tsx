@@ -11,7 +11,6 @@ export default function () {
             <RulesSection/>
             <Roles/>
 			<CTASection/>
-			
         </main>
     )
 }

@@ -22,7 +22,7 @@ const Navbar = () => {
 						className='flex items-center gap-3 z-50 flex-shrink-0'
 					>
 						<Image
-							src='/kwodraentLogoBlack.png'
+							src='/KwodraentLogoBlack.png'
 							height={34.2}
 							width={135}
 							alt='kwodraent'
