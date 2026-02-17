@@ -13,13 +13,8 @@ export default function AboutUS() {
 			<ServicesSection />
 			<Categories/>
 			<Approach/>
-			
-            
 			<ImageSection/>
 			<CTASection/>
-			
-			
-			
 		</main>
 	);
 }
