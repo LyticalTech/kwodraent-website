@@ -1,67 +1,64 @@
-'use client';
 
-import React from 'react';
 import Image from 'next/image';
-import Container from '@/components/Container';
+import Link from 'next/link';
 
-const cards = [
-  {
-    id: 1,
-    description: '5 Ways To Maximize Your Solar Savings',
-    imageUrl: '/OILRIG.avif',
-  },
-  {
-    id: 2,
-    description: '5 Ways To Maximize Your Solar Savings',
-    imageUrl: '/OILRIG.avif',
-  },
-  {
-    id: 3,
-    description: '5 Ways To Maximize Your Solar Savings',
-    imageUrl: '/OILRIG.avif',
-  },
-];
+const Description = () => {
+	const cards = [
+		{
+			title: 'Who We Are',
+			image: '/assets/Hero image.png',
+			link: '/Who-We-Are', // page 1
+		},
+		{
+			title: 'Subsidiaries',
+			image: '/assets/Bottom What We Do.png',
+      link: '/subsidiaries', // page 2
+		},
+		{
+			title: 'Partnerships',
+			image: '/Bottom our partners.webp',
+			link: '/partnerships', // page 3
+		},
+	];
 
-const ImageSection = () => {
-  return (
-    <section className="py-16 md:py-24 bg-black">
-      <Container>
-        {/* RESPONSIVE GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+	return (
+		<section className='p-16 bg-black'>
+			<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+				{cards.map((card) => (
+					<div
+						key={card.title}
+						className='group block'
+					>
+						{/* Image */}
+						<div className='relative w-full h-64'>
+							<Image
+								src={card.image}
+								alt={card.title}
+								fill
+								className='object-cover rounded-3xl'
+								priority
+							/>
+						</div>
 
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className="group flex flex-col"
-            >
-              {/* IMAGE */}
-              <div className="relative w-full h-[220px] sm:h-[240px] lg:h-[260px] overflow-hidden rounded-2xl">
-                <Image
-                  src={card.imageUrl}
-                  alt={card.description}
-                  fill
-                  className="object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
+						{/* Decorative horizontal bar */}
+						<div className='mt-4 h-0.5 w-full bg-gray-300 transition-colors duration-300 group-hover:bg-blue-600' />
 
-              {/* TEXT */}
-              <div className="flex flex-col flex-1 mt-5">
-                <p className="text-white text-lg sm:text-xl lg:text-2xl leading-snug">
-                  {card.description}
-                </p>
+						{/* Title + Button */}
+						<div className='mt-6'>
+							<h3 className='text-xl text-white'>{card.title}</h3>
 
-                {/* BUTTON */}
-                <button className="mt-6 w-fit bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2.5 rounded-lg transition">
-                  Read More
-                </button>
-              </div>
-            </div>
-          ))}
-
-        </div>
-      </Container>
-    </section>
-  );
+							{/* BUTTON LINK */}
+							<Link href={card.link}>
+								<span className='inline-block mt-4 px-5 py-2 text-sm bg-blue-600 text-white rounded-full cursor-pointer hover:bg-blue-700'>
+									Explore
+								</span>
+							</Link>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+	);
 };
 
-export default ImageSection;
+export default Description;

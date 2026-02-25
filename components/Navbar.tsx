@@ -101,7 +101,7 @@ const Navbar = () => {
 					{/* Desktop contact */}
 					<Link
 						href='/contact'
-						className='hidden md:block px-5 py-2 rounded-2xl bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition flex-shrink-0'
+						className='hidden md:block px-5 py-2 rounded-xl bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition flex-shrink-0'
 					>
 						Contact Us
 					</Link>
@@ -124,49 +124,94 @@ const Navbar = () => {
 			</Container>
 
 			{/* Mobile Menu */}
-			<div
-				className={`md:hidden fixed left-0 right-0 bg-black text-white transition-all duration-300 overflow-hidden ${
-					isMenuOpen ? 'h-screen opacity-100 visible' : 'h-0 opacity-0 invisible'
-				} top-[64px]`}
-			>
-				<nav className='flex flex-col items-center gap-8 pt-12 pb-8 px-6 w-full'>
-					<Link
-						href='/who-we-are'
-						onClick={closeMenu}
-						className='text-lg hover:text-white/60 transition'
-					>
-						Who We Are
-					</Link>
-					<Link
-						href='/what-we-do'
-						onClick={closeMenu}
-						className='text-lg hover:text-white/60 transition'
-					>
-						What We Do
-					</Link>
-					<Link
-						href='/subsidiaries'
-						onClick={closeMenu}
-						className='text-lg hover:text-white/60 transition'
-					>
-						Subsidiaries
-					</Link>
-					<Link
-						href='/partnerships'
-						onClick={closeMenu}
-						className='text-lg hover:text-white/60 transition'
-					>
-						Partnerships
-					</Link>
-					<Link
-						href='/contact'
-						onClick={closeMenu}
-						className='mt-4 px-6 py-3 rounded-full bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition'
-					>
-						Contact Us
-					</Link>
-				</nav>
-			</div>
+		{/* Mobile Menu */}
+<div
+  className={`md:hidden fixed left-0 right-0 bg-black text-white transition-all duration-300 overflow-hidden ${
+    isMenuOpen ? 'h-screen opacity-100 visible' : 'h-0 opacity-0 invisible'
+  } top-[64px]`}
+>
+  <nav className='flex flex-col items-center gap-6 pt-12 pb-8 px-6 w-full'>
+
+    {/* WHO WE ARE */}
+    <Link
+      href='/who-we-are'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      Who We Are
+    </Link>
+
+    {/* Sub links */}
+    <div className='flex flex-col items-center gap-4 -mt-2 mb-2'>
+      <Link
+        href='/who-we-are'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        About Us
+      </Link>
+
+      <Link
+        href='/who-we-are'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        Values
+      </Link>
+
+      <Link
+        href='/who-we-are'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        Leadership
+      </Link>
+
+      <Link
+        href='/compliance'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        Compliance
+      </Link>
+    </div>
+
+    {/* OTHER LINKS */}
+    <Link
+      href='/what-we-do'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      What We Do
+    </Link>
+
+    <Link
+      href='/subsidiaries'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      Subsidiaries
+    </Link>
+
+    <Link
+      href='/partnerships'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      Partnerships
+    </Link>
+
+    <Link
+      href='/contact'
+      onClick={closeMenu}
+      className='mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition'
+    >
+      Contact Us
+    </Link>
+
+  </nav>
+</div>
+
 		</header>
 	);
 };

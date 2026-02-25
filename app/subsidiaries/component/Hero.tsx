@@ -17,7 +17,7 @@ const Hero = () => {
 
           {/* HEADING */}
           <div className="flex flex-col gap-3 max-w-3xl">
-            <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="text-black text-2xl sm:text-3xl md:text-4xl">
               Effortlessly manage your accounting
             </h2>
 
@@ -36,27 +36,27 @@ const Hero = () => {
             />
 
             {/* DARK OVERLAY FOR READABILITY */}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 " />
 
             {/* CONTENT WRAPPER — positioned at bottom */}
             <div className="absolute inset-0 flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end p-6 md:p-10 gap-6">
               
               {/* LEFT */}
               <div className="w-full md:max-w-md text-white md:text-left mt-auto">
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3">
+                <h2 className="text-xl md:text-2xl lg:text-3xl  mb-3">
                   Stronger Together Offices
                 </h2>
-                <p className="text-xs md:text-sm opacity-90 leading-relaxed">
+                <p className="text-xs md:text-sm opacity-90 ">
                   As part of industry alliances, we can offer expanded capabilities and expertise to customers, and take advantage of a deep pool of subsea knowledge.
                 </p>
               </div>
 
               {/* RIGHT */}
-              <div className="w-full md:max-w-md text-white md:text-left mt-4 md:mt-0">
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3">
+              <div className="w-full mr-20 md:max-w-md text-white md:text-black md:text-left mt-4 md:mt-0">
+                <h2 className="text-xl md:text-2xl lg:text-3xl  mb-3">
                   Global Reach
                 </h2>
-                <p className="text-xs md:text-sm opacity-90 leading-relaxed">
+                <p className="text-xs  md:text-sm opacity-90 ">
                   These partnerships allow us to deliver subsea projects of any scale anywhere in the world, with operational facilities in various geographies tailored to the asset management requirements of the regions they serve.
                 </p>
               </div>

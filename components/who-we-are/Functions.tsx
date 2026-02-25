@@ -61,7 +61,7 @@ const Functions = () => {
 
 					{/* Description + Button */}
 					<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-6 w-full'>
-						<p className='text-white text-4xl max-w-4xl leading-relaxed'>
+						<p className='text-white text-4xl max-w-4xl font-thin'>
 							We’ve been at the forefront of subsea for decades, because we put our customers first. Here are some of the ways we
 							can help you.
 						</p>
@@ -100,7 +100,7 @@ const Functions = () => {
 							<div className='relative flex flex-col justify-between h-full p-6 z-10'>
 								{/* Top row */}
 								<div className='flex justify-between items-start'>
-									<h3 className='text-lg font-semibold text-white'>{card.title}</h3>
+									<h3 className='text-lg  text-white'>{card.title}</h3>
 									<button className='border-2 border-white text-white px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300'>
 										Service
 									</button>
@@ -111,7 +111,7 @@ const Functions = () => {
 									<p className='text-sm text-white opacity-0 group-hover:opacity-100 transition-all duration-300'>
 										{card.hoverText}
 									</p>
-									<span className='text-xl font-bold text-white'>({card.number})</span>
+									<span className='text-xl  text-white'>({card.number})</span>
 								</div>
 							</div>
 						</a>

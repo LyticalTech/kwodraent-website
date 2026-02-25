@@ -101,7 +101,7 @@ const Contact = () => {
 					>
 						{/* LEFT — Image with broken border */}
 						<motion.div
-							className='relative w-full max-w-lg mx-auto lg:mx-0 aspect-[3/4] rounded-3xl overflow-hidden order-2 lg:order-1'
+							className='relative w-full max-w-lg mx-auto lg:mx-0 aspect-3/4 rounded-3xl overflow-hidden order-2 lg:order-1'
 							variants={fadeInLeftVariants}
 						>
 							{/* Main Image */}
@@ -117,7 +117,7 @@ const Contact = () => {
 
 						{/* RIGHT — Contact content */}
 						<motion.div
-							className='bg-white flex flex-col justify-center order-1 lg:order-2'
+							className='bg-white flex flex-col justify-center mt-8 order-1 lg:order-2'
 							variants={fadeInRightVariants}
 						>
 							{/* Header */}

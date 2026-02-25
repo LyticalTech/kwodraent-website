@@ -113,7 +113,7 @@ const ServicesSection = () => {
                 onClick={() => handleClick(index)}
                 className='flex flex-col items-center justify-center py-6 px-4 relative group cursor-pointer'
               >
-                <h4 className={`font-bold text-sm transition ${active === index ? 'text-black' : 'text-gray-400'}`}>
+                <h4 className={` text-sm transition ${active === index ? 'text-black' : 'text-gray-400'}`}>
                   {item.title}
                 </h4>
 
@@ -131,7 +131,7 @@ const ServicesSection = () => {
         {/* ================= CONTENT ================= */}
         <div className='mt-20 grid md:grid-cols-12 gap-8 items-center'>
           {/* IMAGE */}
-          <div className='relative h-[400px] w-full overflow-hidden  md:col-span-7'>
+          <div className='relative h-[400px] w-full overflow-hidden rounded-2xl md:col-span-7'>
             <AnimatePresence mode='wait'>
               <motion.img
                 key={services[active].image}
@@ -140,7 +140,7 @@ const ServicesSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6 }}
-                className='absolute w-full h-full object-cover'
+                className='absolute w-full h-full object-cover rounded-2xl'
               />
             </AnimatePresence>
           </div>
@@ -162,7 +162,7 @@ const ServicesSection = () => {
                     {React.createElement(services[active].icon, { className: 'text-white w-5 h-5' })}
                   </div>
 
-                  <h2 className='text-3xl md:text-4xl font-semibold text-black max-w-xl'>
+                  <h2 className='text-3xl md:text-4xl  text-black max-w-xl'>
                     {services[active].heading}
                   </h2>
                 </div>

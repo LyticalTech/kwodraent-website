@@ -7,7 +7,7 @@ const Hero = () => {
 		<section className='w-full bg-white py-12'>
 			<Container>
 				<div className='flex flex-col items-start mt-24 gap-6 mb-8'>
-					<h2 className='text-sm text-black flex items-center gap-3 tracking-wider '>
+					<h2 className='text-sm text-black flex items-center gap-3'>
 						<div className='w-6 h-[2px] bg-blue-500' />
 						Ethics and Compiliance
 					</h2>

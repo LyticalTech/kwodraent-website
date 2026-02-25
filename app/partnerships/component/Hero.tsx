@@ -7,64 +7,59 @@ import Container from '@/components/Container';
 const slides = [
 	{
 		id: 'solar',
-		name: 'Solar',
+		icon: '/KwodraentLogoBlack.png',
 		image: '/safety.avif',
-		title: 'Gretta',
 		companyTitle: 'Hotel Group',
 		desc: 'Reduced electricity costs dramatically with 1.2 MW of rooftop solar. Guests love staying at an eco-friendly hotel.',
 	},
 	{
 		id: 'wind',
-		name: 'Wind',
+		icon: '/KwodraentLogoBlack.png',
 		image: '/OILRIG.avif',
-		title: 'Career',
 		companyTitle: 'Shopping Center',
-		desc: 'Achieved energy independence with 2 MW of solar panels. Now generating more clean energy than they use.',
+		desc: 'Achieved energy independence with 2 MW of solar panels. Now generating more clean energy than they use',
 	},
 	{
 		id: 'storage',
-		name: 'Storage',
+		icon: '/KwodraentLogoBlack.png',
 		image: '/mountain.avif',
-		title: 'Chema',
 		companyTitle: 'Manufacturing Facility',
-		desc: 'Strategic 9.8 MW installation across 11 buildings maximized energy production, space efficiency and clean energy.',
+		desc: 'Strategic 9.8 MW installation across 11 buildings maximized energy production , space efficiency and clean energy. ',
 	},
 	{
 		id: 'grid',
-		name: 'Grid',
+		icon: '/KwodraentLogoBlack.png',
 		image: '/roofsolar.avif',
-		title: 'ALL RENO',
 		companyTitle: 'Residential',
 		desc: 'Solar covers 90% of our electricity needs. Even with kids using more devices, our bills stay low.',
 	},
 ];
 
-const Hero = () => {
+export default function Hero() {
 	const [active, setActive] = useState(0);
 
-	// Auto-slide every 5 seconds
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setActive((prev) => (prev + 1) % slides.length); // loop back to 0
+			setActive((prev) => (prev + 1) % slides.length);
 		}, 5000);
-
-		return () => clearInterval(interval); // cleanup on unmount
+		return () => clearInterval(interval);
 	}, []);
 
 	return (
 		<section className='w-full bg-white py-12'>
 			<Container>
+				{/* heading */}
 				<h1 className='flex mt-24 items-center gap-3 text-base text-black mb-6'>
 					<span className='inline-block w-4 h-0.5 bg-blue-500' />
 					Partnership
 				</h1>
 
-				<div className='flex flex-col w-full items-start gap-4'>
-					<h2 className='text-black text-4xl '>Partnerships</h2>
-					<p className='text-black text-base'>Kwo Draent is committed to blah blah blah partnerships.</p>
+				<div className='flex flex-col gap-4'>
+					<h2 className='text-black text-4xl'>Partnerships</h2>
+					<p className='text-black text-base'>Kwo Draent builds strong and sustainable partnerships.</p>
 				</div>
 
-				{/* SLIDER */}
+				{/* slider */}
 				<div className='relative w-full overflow-hidden mt-12'>
 					<div
 						className='flex transition-transform duration-700 ease-in-out'
@@ -77,15 +72,25 @@ const Hero = () => {
 							>
 								<Image
 									src={slide.image}
-									alt={slide.title}
+									alt='slide'
 									fill
-									className='object-cover rounded-4xl'
+									className='object-cover rounded-3xl'
 								/>
-								<div className='absolute inset-0 flex items-center justify-end px-6 md:px-16'>
-									<div className='bg-white max-w-md p-8 rounded-2xl shadow-xl'>
-										<h1 className='text-2xl font-bold text-black mb-2'>{slide.title}</h1>
-										<h2 className='text-black text-sm mb-4'>{slide.companyTitle}</h2>
-										<p className='text-black text-base'>{slide.desc}</p>
+
+								{/* text card */}
+								<div className='absolute inset-0 flex items-center justify-end px-6 py-64 md:px-16'>
+									<div className='bg-white max-w-md p-10 min-h-[360px] rounded-2xl shadow-xl  border-t-4 border-blue-600 flex flex-col'>
+										<Image
+											src={slide.icon}
+											alt='icon'
+											width={150}
+											height={150}
+											className='mb-24'
+										/>
+
+										<h2 className='text-black text-2xl mb-4'>{slide.companyTitle}</h2>
+
+										<p className='text-black text-base font-light '>{slide.desc}</p>
 									</div>
 								</div>
 							</div>
@@ -93,36 +98,31 @@ const Hero = () => {
 					</div>
 				</div>
 
-				{/* SELECTOR */}
-				<div className='w-full flex items-center justify-center mt-10 gap-6'>
-  {slides.map((slide, index) => (
-    <button
-      key={slide.id}
-      onClick={() => setActive(index)}
-      className='flex w-100 flex-col items-center gap-4 transition pb-5'
-    >
-      {/* indicator line */}
-      <div
-        className={`h-[2px] w-full rounded-full transition-all duration-300 ${
-          active === index ? 'bg-black' : 'bg-gray-300'
-        }`}
-      />
+				{/* selector */}
+				<div className='w-full flex items-center justify-center mt-10 gap-8'>
+					{slides.map((slide, index) => (
+						<button
+							key={slide.id}
+							onClick={() => setActive(index)}
+							className='w-full flex flex-col items-center gap-4 pb-5 '
+						>
+							<div
+								className={`h-[2px] w-full flex items-center justify-between rounded-full ${
+									active === index ? 'bg-black' : 'bg-gray-300'
+								}`}
+							/>
 
-      {/* title */}
-      <h1
-        className={`text-xl font-semibold transition-colors ${
-          active === index ? 'text-black' : 'text-gray-400'
-        }`}
-      >
-        {slide.title}
-      </h1>
-    </button>
-  ))}
-</div>
-
+							<Image
+								src={slide.icon}
+								alt='icon'
+								width={150}
+								height={150}
+								className={`transition-all duration-300 ${active === index ? 'opacity-100 scale-110' : 'opacity-40'}`}
+							/>
+						</button>
+					))}
+				</div>
 			</Container>
 		</section>
 	);
-};
-
-export default Hero;
+}

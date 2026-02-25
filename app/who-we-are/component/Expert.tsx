@@ -38,12 +38,12 @@ const Expert = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center gap-8 mb-12"
         >
-          <h2 className="text-sm text-black flex items-center gap-3 tracking-wider">
+          <h2 className="text-sm text-black flex items-center gap-3">
             <div className="w-6 h-[2px] bg-blue-500" />
             Expertise
           </h2>
 
-          <h3 className="text-black text-4xl font-semibold">
+          <h3 className="text-black text-4xl ">
             Meet Our Leaders
           </h3>
         </motion.div>

@@ -43,7 +43,7 @@ const Hero = () => {
 	return (
 		<section
 			ref={ref}
-			className='bg-white '
+			className='bg-white h-[calc(100vh-10rem)] mt-20 '
 		>
 			<Container>
 				<motion.div
@@ -58,7 +58,7 @@ const Hero = () => {
 						className='max-w-md mt-12'
 					>
 						<h2 className='text-base flex items-center gap-3 mb-6'>
-							<div className='w-6 h-[2px] bg-blue-500' />
+							<span className='inline-block w-4 h-0.5 bg-blue-500' />
 							Businity’s services
 						</h2>
 

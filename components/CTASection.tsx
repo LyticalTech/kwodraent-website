@@ -62,7 +62,7 @@ const CTASection = () => {
 />
 
 {/* Dark overlay */}
-<div className="absolute inset-0 bg-black/50" />
+<div className="absolute inset-0" />
 
 {/* Content */}
 <div className="relative z-10">
