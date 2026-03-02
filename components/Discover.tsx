@@ -86,7 +86,6 @@ const Discover = () => {
 						className='flex items-start'
 					>
 						<h2 className='text-base flex items-center gap-2 '>
-							{' '}
 							<div className='w-4 h-1 bg-blue-500'></div>
 							Who We Are
 						</h2>
