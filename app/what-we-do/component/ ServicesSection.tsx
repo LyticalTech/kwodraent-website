@@ -92,7 +92,6 @@ const ServicesSection = () => {
 		setPaused(true); // pause auto when user clicks
 	};
 
-<<<<<<< HEAD
 	return (
 		<section className='py-6 bg-white'>
 			<Container>
@@ -108,23 +107,6 @@ const ServicesSection = () => {
 								<h4 className={`font-bold text-sm transition ${active === index ? 'text-black' : 'text-gray-400'}`}>
 									{item.title}
 								</h4>
-=======
-  return (
-    <section className='py-6 bg-white'>
-      <Container>
-        {/* ================= TOP TABS ================= */}
-        <div className='w-full border-b border-gray-200'>
-          <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4'>
-            {services.map((item, index) => (
-              <button
-                key={item.id}
-                onClick={() => handleClick(index)}
-                className='flex flex-col items-center justify-center py-6 px-4 relative group cursor-pointer'
-              >
-                <h4 className={` text-sm transition ${active === index ? 'text-black' : 'text-gray-400'}`}>
-                  {item.title}
-                </h4>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 
 								{/* indicator */}
 								<div
@@ -137,7 +119,6 @@ const ServicesSection = () => {
 					</div>
 				</div>
 
-<<<<<<< HEAD
 				{/* ================= CONTENT ================= */}
 				<div className='mt-20 grid md:grid-cols-12 gap-8 items-center'>
 					{/* IMAGE */}
@@ -154,24 +135,6 @@ const ServicesSection = () => {
 							/>
 						</AnimatePresence>
 					</div>
-=======
-        {/* ================= CONTENT ================= */}
-        <div className='mt-20 grid md:grid-cols-12 gap-8 items-center'>
-          {/* IMAGE */}
-          <div className='relative h-[400px] w-full overflow-hidden rounded-2xl md:col-span-7'>
-            <AnimatePresence mode='wait'>
-              <motion.img
-                key={services[active].image}
-                src={services[active].image}
-                initial={{ opacity: 0, scale: 1.08 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6 }}
-                className='absolute w-full h-full object-cover rounded-2xl'
-              />
-            </AnimatePresence>
-          </div>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 
 					{/* TEXT */}
 					<div className='flex flex-col items-start gap-6 md:col-span-5'>
@@ -190,15 +153,8 @@ const ServicesSection = () => {
 										{React.createElement(services[active].icon, { className: 'text-white w-5 h-5' })}
 									</div>
 
-<<<<<<< HEAD
 									<h2 className='text-3xl md:text-4xl font-semibold text-black max-w-xl'>{services[active].heading}</h2>
 								</div>
-=======
-                  <h2 className='text-3xl md:text-4xl  text-black max-w-xl'>
-                    {services[active].heading}
-                  </h2>
-                </div>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 
 								{/* desc */}
 								<p className='text-gray-600 leading-relaxed max-w-lg'>{services[active].desc}</p>

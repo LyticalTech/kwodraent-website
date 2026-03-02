@@ -55,13 +55,8 @@ const Hero = () => {
 	const activeItem = items.find((item) => item.value === active);
 
 	return (
-<<<<<<< HEAD
 		<section className='w-full bg-black py-12'>
 			<div className='max-w-5xl mx-auto px-4'>
-=======
-		<section className='w-full bg-white py-12'>
-			<Container>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 				<motion.div
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -69,18 +64,12 @@ const Hero = () => {
 					viewport={{ once: true }}
 					className='flex flex-col items-start mt-24 gap-6 mb-8'
 				>
-<<<<<<< HEAD
 					<h2 className='text-sm text-white flex font-medium items-center gap-2 tracking-wide '>
 						<div className='w-4 h-1 bg-blue-600 ' />
-=======
-					<h2 className='text-sm text-black flex items-center gap-3 tracking-wider '>
-						<span className='inline-block w-4 h-0.5 bg-blue-500' />
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 						What We Do
 					</h2>
 
 					{/* content row */}
-<<<<<<< HEAD
 					<div className='flex flex-col w-full'>
 						<h3 className='text-white text-[clamp(2.6rem,3vw,6rem)] leading-[1.05] font-semibold tracking-tight mb-4'>
 							Advancing energy development.
@@ -155,19 +144,6 @@ const Hero = () => {
 					</div>
 				</motion.div>
 			</div>
-=======
-					<div className='flex flex-col md:flex-row md:items-start md:justify-between gap-6 w-full'>
-						<h3 className='text-black text-3xl md:text-4xl  max-w-xl'>Copy about detailed services</h3>
-
-						<p className='text-gray-600 max-w-xl '>
-							OneSubsea maintains the highest standards of integrity in all its operations and follows SLB’s Code of Conduct,
-							policies and governance practices with respect to business ethics, internal controls and compliance with applicable
-							laws.
-						</p>
-					</div>
-				</motion.div>
-			</Container>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 		</section>
 	);
 };

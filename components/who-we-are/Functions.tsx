@@ -65,11 +65,7 @@ const Functions = () => {
 
 					{/* Description + Button */}
 					<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-6 w-full'>
-<<<<<<< HEAD
 						<p className='text-white text-xl font-semibold md:text-3xl max-w-3xl leading-tight'>
-=======
-						<p className='text-white text-4xl max-w-4xl font-thin'>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 							We’ve been at the forefront of subsea for decades, because we put our customers first. Here are some of the ways we
 							can help you.
 						</p>
@@ -119,11 +115,7 @@ const Functions = () => {
 									<p className='text-base max-w-50 text-white opacity-0 group-hover:opacity-100 transition-all duration-300'>
 										{card.hoverText}
 									</p>
-<<<<<<< HEAD
 									<span className='text-base font-bold text-white'>({card.number})</span>
-=======
-									<span className='text-xl  text-white'>({card.number})</span>
->>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 								</div>
 							</div>
 						</a>
