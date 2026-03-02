@@ -1,126 +1,151 @@
 'use client';
 
-import { useRef } from 'react';
-import Container from '@/components/Container';
-import { motion, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import { MdArrowOutward } from 'react-icons/md';
+import WhoWeAreImage from '@/public/assets/whoWeAre.jpg';
 
 const Hero = () => {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, margin: '-100px' });
+	const { scrollYProgress } = useScroll();
 
-	const stats = [
-		{ description: 'of combined industry experience', percent: '10+' },
-		{ description: 'stores launched and successfully scaled', percent: '500+' },
-		{ description: 'customer retention rate', percent: '95%' },
-	];
+	// Parallax background movement
+	const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '40%']);
+	const fadeOut = useTransform(scrollYProgress, [0, 0.4], [1, 0.6]);
 
+	// Animation Variants
 	const containerVariants = {
 		hidden: { opacity: 0 },
 		visible: {
 			opacity: 1,
-			transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+			transition: {
+				staggerChildren: 0.25,
+				delayChildren: 0.3,
+			},
 		},
 	};
 
 	const itemVariants = {
-		hidden: { opacity: 0, y: 40 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.7 },
+		hidden: {
+			opacity: 0,
+			y: 40,
 		},
-	};
-
-	const statCardVariants = {
-		hidden: { opacity: 0, y: 40 },
 		visible: {
 			opacity: 1,
 			y: 0,
-			transition: { duration: 0.6 },
+			transition: {
+				duration: 0.9,
+				ease: [0.22, 1, 0.36, 1] as const,
+			},
 		},
 	};
 
 	return (
-		<section
-			ref={ref}
-			className='bg-white '
-		>
-			<Container>
+		<section className='relative w-full min-h-screen flex items-center overflow-hidden shadow-gray-700 border-b-20 border-black/90'>
+			{/* Background Image */}
+			<motion.div
+				style={{ y: backgroundY }}
+				className='absolute inset-0 -z-10'
+			>
+				<Image
+					src={WhoWeAreImage}
+					alt='Energy infrastructure background'
+					fill
+					priority
+					className='aspect-auto object-center'
+				/>
+
+				{/* Professional Dark Overlay */}
+				<div className='absolute inset-0 bg-black/60' />
+				<div className='absolute inset-0 bg-linear-to-b from-blue-900/20 via-blue-900/30 to-black/70' />
+			</motion.div>
+
+			{/* Subtle Animated Glow Effects */}
+			<motion.div
+				style={{ opacity: fadeOut }}
+				className='absolute inset-0 pointer-events-none -z-10'
+			>
+				<motion.div
+					animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.25, 0.15] }}
+					transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+					className='absolute top-24 right-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl'
+				/>
+			</motion.div>
+
+			<div className='relative w-full max-w-6xl mx-auto px-6'>
 				<motion.div
 					variants={containerVariants}
 					initial='hidden'
-					animate={isInView ? 'visible' : 'hidden'}
-					className='flex flex-col mt-24 gap-16'
+					animate='visible'
+					className='relative pt-24 pb-24 text-left'
 				>
-					{/* HEADING */}
-					<motion.div
-						variants={itemVariants}
-						className='max-w-md mt-12'
-					>
-						<h2 className='text-base flex items-center gap-3 mb-6'>
-							<div className='w-6 h-[2px] bg-blue-500' />
-							Businity’s services
-						</h2>
-
-						<p className='text-4xl text-black leading-tight'>
-							Focus on the Customer,
-							<br />
-							Not Your Manual Work.
-						</p>
-					</motion.div>
-
-					{/* IMAGE + CONTENT */}
-					{/* IMAGE + CONTENT */}
-					<div className='flex flex-col lg:flex-row  items-start justify-between'>
-						{/* IMAGE — smaller */}
+					<div className='max-w-5xl'>
+						{/* Heading */}
+						<motion.h1
+							variants={itemVariants}
+							className='text-sm text-white flex font-medium items-center gap-2 tracking-wide '
+						>
+							<div className='w-4 h-1 bg-blue-600 ' />
+							Who We Are
+						</motion.h1>
+						<motion.h2
+							variants={itemVariants}
+							className='mt-6 text-[clamp(2.2rem,3.6vw,5rem)] font-mediu text-white leading-[1.1] tracking-tight'
+						>
+							We are Kwo Draent.
+						</motion.h2>
+						<motion.p
+							variants={itemVariants}
+							className='mt-4 max-w-5xl text-[clamp(1.05rem,1.4vw,1.3rem)] text-white/85 leading-[1.6]'
+						>
+							Africa’s energy landscape is opening to indigenous participation at scale. We integrate technical depth, sector
+							experience and commercial rigor to deliver energy and industrial solutions safely, efficiently, and reliably.
+						</motion.p>
 						<motion.div
 							variants={itemVariants}
-							className='w-full lg:w-[30%]'
+							className='mt-12 grid md:grid-cols-3 gap-12 text-white'
 						>
-							<img
-								src='/assets/Who we are page.jpg'
-								alt='stats'
-								className='w-full h-[300px] object-cover rounded-2xl'
-							/>
-						</motion.div>
-
-						{/* RIGHT CONTENT — larger */}
-						<div className='w-full lg:w-[50%] flex flex-col justify-between'>
-							{/* TEXT */}
-							<motion.p
-								variants={itemVariants}
-								className='text-gray-600 text-lg leading-relaxed mb-12 max-w-2xl'
-							>
-								We go beyond digital infrastructure. We partner with brands to build scalable, future-ready eCommerce experiences.
-								With our expert team and innovative approach, we support businesses to launch and succeed in the digital
-								marketplace.
-							</motion.p>
-
-							{/* STATS */}
-							{/* Stats Grid */}
 							<motion.div
-								variants={containerVariants}
-								className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.4 }}
+								className='relative block border-l-[1px] border-l-gray-300/30 px-8 py-6'
 							>
-								{stats.map((stat) => (
-									<motion.div
-										key={stat.percent}
-										variants={statCardVariants}
-										whileHover={{ y: -8, transition: { duration: 0.3 } }}
-										className='p-4 flex flex-col justify-between h-full  border-l border-gray-300'
-									>
-										<div>
-											<p className='text-5xl  text-black'>{stat.percent}</p>
-
-											<p className='mt-4 text-ms text-black'>{stat.description}</p>
-										</div>
-									</motion.div>
-								))}
+								<div className='absolute top-3 left-0 h-8 w-2 bg-blue-700 rounded-r-sm' />
+								<motion.h2 className='text-[clamp(2.6rem,3.5vw,6rem)] tracking-wide text-white'>100+</motion.h2>
+								<motion.p className='mt-4 text-lg text-white/85 leading-[1.5]'>
+									Years of combined leadership and sector experience across energy and technology
+								</motion.p>
 							</motion.div>
-						</div>
+
+							<motion.div
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.6 }}
+								className='relative block border-l-[1px] border-l-gray-300/30 px-8 py-6 bg-linear-to-r from-white via-blue-200 to-white bg-clip-text text-transparent'
+							>
+								<div className='absolute top-16 left-0 h-8 w-2 bg-blue-700 rounded-r-sm' />
+								<motion.h2 className='text-[clamp(2.6rem,3.5vw,6rem)] tracking-wide text-white'>500+</motion.h2>
+								<motion.p className='mt-4 text-lg text-white/85 leading-[1.5]'>
+									Energy & Infrastructure Projects Executed
+								</motion.p>
+							</motion.div>
+							<motion.div
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.8 }}
+								className='relative block border-l-[1px] border-l-gray-300/30 px-8 py-6 bg-linear-to-r from-white via-blue-200 to-white bg-clip-text text-transparent'
+							>
+								<div className='absolute top-32 left-0 h-8 w-2 bg-blue-700 rounded-r-sm' />
+								<motion.h2 className='text-[clamp(2.6rem,3.5vw,6rem)] tracking-wide text-white'>40%</motion.h2>
+								<motion.p className='mt-4 text-lg text-white/85 leading-[1.5]'>
+									Efficiency gains enabled through integrated solutions
+								</motion.p>
+							</motion.div>
+						</motion.div>
 					</div>
 				</motion.div>
-			</Container>
+			</div>
 		</section>
 	);
 };

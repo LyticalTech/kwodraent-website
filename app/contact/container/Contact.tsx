@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -101,36 +100,35 @@ const Contact = () => {
 					>
 						{/* LEFT — Image with broken border */}
 						<motion.div
-							className='relative w-full max-w-lg mx-auto lg:mx-0 aspect-[3/4] rounded-3xl overflow-hidden order-2 lg:order-1'
+							className='relative w-full max-w-lg mx-auto lg:mx-0 aspect-3/4 rounded-3xl overflow-hidden order-2 lg:order-1'
 							variants={fadeInLeftVariants}
 						>
 							{/* Main Image */}
 							<Image
-								src='assets/Hero image.png' 
+								src='assets/Hero image.png'
 								alt='Solar energy installation'
 								fill
 								className='object-cover object-top-right'
 								priority
 							/>
-
 						</motion.div>
 
 						{/* RIGHT — Contact content */}
 						<motion.div
-							className='bg-white flex flex-col justify-center order-1 lg:order-2'
+							className='bg-white flex flex-col justify-center mt-8 order-1 lg:order-2'
 							variants={fadeInRightVariants}
 						>
 							{/* Header */}
 							<motion.h1
-								className='flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base  text-black mb-4 sm:mb-6'
+								className='text-sm text-gray-800 flex font-medium items-center gap-2 tracking-wide'
 								variants={fadeInUpVariants}
 							>
-								<span className='inline-block w-3 sm:w-4 h-0.5 bg-blue-500'></span>
+								<div className='w-4 h-1 bg-blue-600 ' />
 								Contact Us
 							</motion.h1>
 
 							<motion.h2
-								className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 leading-tight'
+								className='mt-4 text-[clamp(3rem,4.8vw,3rem)] mb-4 sm:mb-6 leading-tight'
 								variants={fadeInUpVariants}
 							>
 								Let&apos;s Talk About Your Solar Future

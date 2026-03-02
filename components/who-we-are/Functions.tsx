@@ -3,48 +3,52 @@ import Container from '../Container';
 
 const cards = [
 	{
-		title: 'Urban Planning & Landscape',
+		title: 'Asset Delopment',
 		number: 1,
-		hoverText: 'Developing large-scale plans for sustainable and efficient cities.',
+		hoverText: 'Advancing energy assets from early concept through structured, investment-ready development.',
 	},
 	{
-		title: 'Interior Design',
+		title: 'Enineering, Procurement & Construction',
 		number: 2,
-		hoverText: 'Creating stylish, functional, and comfortable living spaces.',
+		hoverText: 'Delivering integrated engineering, procurement, and construction aligned to requirements.',
 	},
 	{
-		title: 'Sustainable & Green Architecture',
+		title: 'Operations & Maintenance',
 		number: 3,
-		hoverText: 'Utilizing natural light, ventilation, and shading for energy efficiency.',
+		hoverText: 'Maintaining asset integrity and performance through disciplined operations and maintenance execution.',
 	},
 	{
-		title: 'Restoration & Heritage Conservation',
+		title: 'Drilling',
 		number: 4,
-		hoverText: 'Preserving and refurbishing aged structures while maintaining their original charm.',
+		hoverText:
+			'Executing drilling programs with the technical oversight and operational control required for complex environments.',
 	},
 	{
-		title: 'Construction & Project Management',
+		title: 'Project Management',
 		number: 5,
-		hoverText: 'Managing the entire process from design to construction for a seamless experience.',
+		hoverText: 'Managing projects with structured governance, risk control, and delivery discipline.',
 	},
+
 	{
-		title: '3D Printing & Architecture',
+		title: 'Manpower & Training',
 		number: 6,
-		hoverText: 'Creating detailed architectural models quickly for design validation.',
-	},
-	{
-		title: 'VR/AR Architectural Walkthroughs',
-		number: 7,
-		hoverText: 'Experience architectural designs in a fully interactive virtual environment.',
-	},
-	{
-		title: 'Metaverse & Digital Twin Architecture',
-		number: 8,
-		hoverText: 'Designing immersive digital environments for businesses, social hubs and experiences.',
+		hoverText: 'Developing workforce capability through targeted technical and safety training programs.',
 	},
 	{
 		title: 'Marine Services',
+		number: 7,
+		hoverText: 'Providing marine assets and logistics for offshore installation, intervention, and field operations.',
+	},
+	{
+		title: 'Fabrication',
+		number: 8,
+		hoverText: 'Fabrication energy infrastructure and components to certified industry and project specifications.',
+	},
+	{
+		title: 'Digital Transformation',
 		number: 9,
+		hoverText:
+			'Digital transformation through bespoke systems, data integration, and scalable software that eliminate operational blind spots.',
 	},
 ];
 
@@ -53,7 +57,7 @@ const Functions = () => {
 		<section className='w-full bg-black py-16'>
 			<Container>
 				{/* Heading */}
-				<div className='flex flex-col items-start gap-6'>
+				<div className='px-4 max-w-6xl mx-auto flex flex-col items-start gap-6'>
 					<h2 className='text-base text-white flex items-center gap-2'>
 						<div className='w-4 h-1 bg-blue-500' />
 						What We Do
@@ -61,7 +65,7 @@ const Functions = () => {
 
 					{/* Description + Button */}
 					<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-6 w-full'>
-						<p className='text-white text-4xl max-w-4xl leading-relaxed'>
+						<p className='text-white text-xl font-semibold md:text-3xl max-w-3xl leading-tight'>
 							We’ve been at the forefront of subsea for decades, because we put our customers first. Here are some of the ways we
 							can help you.
 						</p>
@@ -78,12 +82,12 @@ const Functions = () => {
 				</div>
 
 				{/* 3x3 Card Grid */}
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
+				<div className='px-4 py-8 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
 					{cards.map((card) => (
 						<a
 							key={card.number}
 							href='/what-we-do'
-							className='group relative block h-60 overflow-hidden border border-white rounded-none transition-all duration-300'
+							className='group relative block h-60 overflow-hidden border border-neutral-600 rounded-none transition-all duration-300'
 						>
 							{/* Background image layer */}
 							<div
@@ -100,7 +104,7 @@ const Functions = () => {
 							<div className='relative flex flex-col justify-between h-full p-6 z-10'>
 								{/* Top row */}
 								<div className='flex justify-between items-start'>
-									<h3 className='text-lg font-semibold text-white'>{card.title}</h3>
+									<h3 className='text-lg  text-white'>{card.title}</h3>
 									<button className='border-2 border-white text-white px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300'>
 										Service
 									</button>
@@ -108,10 +112,10 @@ const Functions = () => {
 
 								{/* Bottom row */}
 								<div className='flex justify-between items-end'>
-									<p className='text-sm text-white opacity-0 group-hover:opacity-100 transition-all duration-300'>
+									<p className='text-base max-w-50 text-white opacity-0 group-hover:opacity-100 transition-all duration-300'>
 										{card.hoverText}
 									</p>
-									<span className='text-xl font-bold text-white'>({card.number})</span>
+									<span className='text-base font-bold text-white'>({card.number})</span>
 								</div>
 							</div>
 						</a>

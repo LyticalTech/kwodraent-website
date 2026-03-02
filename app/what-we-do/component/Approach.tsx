@@ -8,28 +8,28 @@ const cards = [
     title: 'Excellence & reliability',
     description:
       'We start with a conversation - to understand your story, your vision and what truly matters to you. This is where trust begins.',
-    image: '/mountain.avif',
+    image: '/icons/1.png',
   },
   {
     id: 2,
     title: 'Innovation',
     description:
       'Through guided sessions, we shape meaningful moments into timeless images. Whether editorial or candid every frame is intentional.',
-    image: '/OILRIG.avif',
+    image: '/icons/2.png',
   },
   {
     id: 3,
     title: 'Integrity',
     description:
       'Your gallery is hand-edited curated and presented with artistry. Developed in a format designed to preserve and share beautifully.',
-    image: '/safety.avif',
+    image: '/icons/3.png',
   },
   {
     id: 4,
     title: 'Partnership',
     description:
       'Your gallery is hand-edited curated and presented with artistry. Developed in a format designed to preserve and share beautifully.',
-    image: '/roofsolar.avif',
+    image: '/icons/4.png',
   },
 ];
 
@@ -40,23 +40,23 @@ const Approach = () => {
         <div className="flex flex-col items-center gap-12">
 
           {/* TITLE */}
-          <h1 className="text-3xl md:text-4xl font-semibold text-black text-center">
+          <h1 className="text-3xl md:text-4xl text-black text-center">
             Our Approach
           </h1>
 
           {/* LINE */}
           <div className="w-full h-px bg-gray-300" />
 
-          {/* RESPONSIVE GRID */}
+          {/* GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
 
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="group bg-white p-6 rounded-2xl flex flex-col items-center text-center hover:shadow-xl transition duration-300"
+                className="bg-white p-6 rounded-2xl flex flex-col items-start"
               >
-                {/* IMAGE */}
-                <div className="relative w-32 h-32 md:w-36 md:h-36 mb-6 overflow-hidden rounded-full">
+                {/* IMAGE ONLY HOVER */}
+                <div className="relative w-32 h-32 md:w-36 md:h-36 mb-6 overflow-hidden rounded-full group">
                   <Image
                     src={card.image}
                     alt={card.title}
@@ -66,11 +66,11 @@ const Approach = () => {
                 </div>
 
                 {/* TEXT */}
-                <h2 className="text-lg font-semibold mb-3">
+                <h2 className="text-lg text-left  mb-3">
                   {card.title}
                 </h2>
 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm text-left">
                   {card.description}
                 </p>
               </div>
