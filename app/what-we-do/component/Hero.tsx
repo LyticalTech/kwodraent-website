@@ -80,6 +80,7 @@ const Hero = () => {
 						</p>
 					</div>
 					<div className='h-px w-full bg-gray-400' />
+					<div></div>
 					<div className='grid lg:grid-cols-2 gap-14 items-start bg-black text-white py-10 rounded-2xl'>
 						{/* LEFT SIDE */}
 						<Accordion

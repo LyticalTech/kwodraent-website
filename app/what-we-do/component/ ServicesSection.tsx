@@ -155,7 +155,6 @@ const ServicesSection = () => {
 
 									<h2 className='text-3xl md:text-4xl font-semibold text-black max-w-xl'>{services[active].heading}</h2>
 								</div>
-
 								{/* desc */}
 								<p className='text-gray-600 leading-relaxed max-w-lg'>{services[active].desc}</p>
 
