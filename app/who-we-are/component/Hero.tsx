@@ -41,6 +41,7 @@ const Hero = () => {
 	};
 
 	return (
+<<<<<<< HEAD
 		<section className='relative w-full min-h-screen flex items-center overflow-hidden shadow-gray-700 border-b-20 border-black/90'>
 			{/* Background Image */}
 			<motion.div
@@ -73,12 +74,20 @@ const Hero = () => {
 			</motion.div>
 
 			<div className='relative w-full max-w-6xl mx-auto px-6'>
+=======
+		<section
+			ref={ref}
+			className='bg-white h-[calc(100vh-10rem)] mt-20 '
+		>
+			<Container>
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 				<motion.div
 					variants={containerVariants}
 					initial='hidden'
 					animate='visible'
 					className='relative pt-24 pb-24 text-left'
 				>
+<<<<<<< HEAD
 					<div className='max-w-5xl'>
 						{/* Heading */}
 						<motion.h1
@@ -101,6 +110,29 @@ const Hero = () => {
 							Africa’s energy landscape is opening to indigenous participation at scale. We integrate technical depth, sector
 							experience and commercial rigor to deliver energy and industrial solutions safely, efficiently, and reliably.
 						</motion.p>
+=======
+					{/* HEADING */}
+					<motion.div
+						variants={itemVariants}
+						className='max-w-md mt-12'
+					>
+						<h2 className='text-base flex items-center gap-3 mb-6'>
+							<span className='inline-block w-4 h-0.5 bg-blue-500' />
+							Businity’s services
+						</h2>
+
+						<p className='text-4xl text-black leading-tight'>
+							Focus on the Customer,
+							<br />
+							Not Your Manual Work.
+						</p>
+					</motion.div>
+
+					{/* IMAGE + CONTENT */}
+					{/* IMAGE + CONTENT */}
+					<div className='flex flex-col lg:flex-row  items-start justify-between'>
+						{/* IMAGE — smaller */}
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 						<motion.div
 							variants={itemVariants}
 							className='mt-12 grid md:grid-cols-3 gap-12 text-white'

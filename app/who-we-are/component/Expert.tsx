@@ -28,6 +28,7 @@ const leaders = [
 ];
 
 const Expert = () => {
+<<<<<<< HEAD
 	return (
 		<section className='py-16 bg-white'>
 			<Container>
@@ -45,6 +46,27 @@ const Expert = () => {
 
 					<h3 className='text-black text-4xl font-semibold'>Meet Our Leaders</h3>
 				</motion.div>
+=======
+  return (
+    <section className="py-16 bg-white">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-8 mb-12"
+        >
+          <h2 className="text-sm text-black flex items-center gap-3">
+            <div className="w-6 h-[2px] bg-blue-500" />
+            Expertise
+          </h2>
+
+          <h3 className="text-black text-4xl ">
+            Meet Our Leaders
+          </h3>
+        </motion.div>
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 
 				<motion.div
 					initial={{ opacity: 0, y: 40 }}

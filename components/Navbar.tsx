@@ -159,11 +159,15 @@ const Navbar = () => {
 					{/* Contact Button */}
 					<Link
 						href='/contact'
+<<<<<<< HEAD
 						className={`hidden md:block px-6 py-2.5 rounded-lg text-sm font-medium transition ${
 							isWhiteBg
 								? 'bg-blue-600 text-white hover:bg-blue-500'
 								: 'border border-white/60 text-white hover:bg-gray-800 duration-500 ease-in-out'
 						}`}
+=======
+						className='hidden md:block px-5 py-2 rounded-xl bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition flex-shrink-0'
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 					>
 						Contact Us
 					</Link>
@@ -181,6 +185,7 @@ const Navbar = () => {
 			</Container>
 
 			{/* Mobile Menu */}
+<<<<<<< HEAD
 			<div
 				className={`md:hidden fixed inset-x-0 top-20 bg-white shadow-lg transition-all duration-300 ${
 					isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -224,6 +229,96 @@ const Navbar = () => {
 					</Link>
 				</nav>
 			</div>
+=======
+		{/* Mobile Menu */}
+<div
+  className={`md:hidden fixed left-0 right-0 bg-black text-white transition-all duration-300 overflow-hidden ${
+    isMenuOpen ? 'h-screen opacity-100 visible' : 'h-0 opacity-0 invisible'
+  } top-[64px]`}
+>
+  <nav className='flex flex-col items-center gap-6 pt-12 pb-8 px-6 w-full'>
+
+    {/* WHO WE ARE */}
+    <Link
+      href='/who-we-are'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      Who We Are
+    </Link>
+
+    {/* Sub links */}
+    <div className='flex flex-col items-center gap-4 -mt-2 mb-2'>
+      <Link
+        href='/who-we-are'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        About Us
+      </Link>
+
+      <Link
+        href='/who-we-are'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        Values
+      </Link>
+
+      <Link
+        href='/who-we-are'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        Leadership
+      </Link>
+
+      <Link
+        href='/compliance'
+        onClick={closeMenu}
+        className='text-sm text-white/80 hover:text-white transition'
+      >
+        Compliance
+      </Link>
+    </div>
+
+    {/* OTHER LINKS */}
+    <Link
+      href='/what-we-do'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      What We Do
+    </Link>
+
+    <Link
+      href='/subsidiaries'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      Subsidiaries
+    </Link>
+
+    <Link
+      href='/partnerships'
+      onClick={closeMenu}
+      className='text-lg hover:text-white/60 transition'
+    >
+      Partnerships
+    </Link>
+
+    <Link
+      href='/contact'
+      onClick={closeMenu}
+      className='mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-[15px] hover:bg-blue-700 transition'
+    >
+      Contact Us
+    </Link>
+
+  </nav>
+</div>
+
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 		</header>
 	);
 };

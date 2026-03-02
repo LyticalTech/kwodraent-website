@@ -68,11 +68,19 @@ const Hero = () => {
 							Specialized Capabilities. <span className='text-neutral-500'>Integrated Delivery.</span>
 						</h2>
 
+<<<<<<< HEAD
 						<p className='mt-6 max-w-5xl text-[clamp(1.05rem,1.5vw,1.3rem)] text-gray-700 leading-[1.5]'>
 							Through our subsidiaries and strategic partnerships, we bring together specialized expertise, regional insight, and
 							delivery strength to support energy developments worldwide.
 						</p>
 					</motion.div>
+=======
+          {/* HEADING */}
+          <div className="flex flex-col gap-3 max-w-3xl">
+            <h2 className="text-black text-2xl sm:text-3xl md:text-4xl">
+              Effortlessly manage your accounting
+            </h2>
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 
 					{/* IMAGES */}
 					<motion.div
@@ -90,6 +98,7 @@ const Hero = () => {
 							/>
 						</motion.div>
 
+<<<<<<< HEAD
 						<motion.div
 							variants={imageReveal}
 							className='-ml-1 w-full lg:w-1/2 bg-gray-100 rounded-r-lg overflow-hidden'
@@ -105,6 +114,50 @@ const Hero = () => {
 			</Container>
 		</section>
 	);
+=======
+          {/* IMAGE */}
+          <div className="relative w-full h-[320px] sm:h-[420px] md:h-[520px] mt-10 overflow-hidden rounded-2xl">
+            <Image
+              src="/assets/Placeholder for subsidiaries.png"
+              alt="Background"
+              fill
+              className="object-cover"
+            />
+
+            {/* DARK OVERLAY FOR READABILITY */}
+            <div className="absolute inset-0 " />
+
+            {/* CONTENT WRAPPER — positioned at bottom */}
+            <div className="absolute inset-0 flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end p-6 md:p-10 gap-6">
+              
+              {/* LEFT */}
+              <div className="w-full md:max-w-md text-white md:text-left mt-auto">
+                <h2 className="text-xl md:text-2xl lg:text-3xl  mb-3">
+                  Stronger Together Offices
+                </h2>
+                <p className="text-xs md:text-sm opacity-90 ">
+                  As part of industry alliances, we can offer expanded capabilities and expertise to customers, and take advantage of a deep pool of subsea knowledge.
+                </p>
+              </div>
+
+              {/* RIGHT */}
+              <div className="w-full mr-20 md:max-w-md text-white md:text-black md:text-left mt-4 md:mt-0">
+                <h2 className="text-xl md:text-2xl lg:text-3xl  mb-3">
+                  Global Reach
+                </h2>
+                <p className="text-xs  md:text-sm opacity-90 ">
+                  These partnerships allow us to deliver subsea projects of any scale anywhere in the world, with operational facilities in various geographies tailored to the asset management requirements of the regions they serve.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </Container>
+    </section>
+  );
+>>>>>>> 7f9dc62351e49f36793bc755d903bcbaa2b58140
 };
 
 export default Hero;
