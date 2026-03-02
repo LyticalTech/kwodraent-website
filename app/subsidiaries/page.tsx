@@ -1,19 +1,13 @@
 import Hero from './component/Hero';
 import Subsidaries from './component/subsidaries';
 import Roles from './component/Roles';
-import CTASection from '@/components/CTASection';
-
 
 export default function AboutUS() {
 	return (
 		<main className='w-full text-black'>
 			<Hero />
-            <Subsidaries />
-            <Roles/>
-			<CTASection/>
-	
-            
-
+			<Subsidaries />
+			<Roles />
 		</main>
 	);
 }

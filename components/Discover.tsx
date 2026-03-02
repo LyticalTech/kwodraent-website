@@ -10,16 +10,16 @@ const Discover = () => {
 
 	const stats = [
 		{
-			description: 'reduction in time spent on translations',
-			percent: '90%',
+			description: 'Years of combined leadership and sector experience across energy and technology',
+			percent: '100+',
 		},
 		{
-			description: 'reduction in translation workload and productivity recapture',
-			percent: '50%',
+			description: 'Energy & Infrastructure Projects Executed',
+			percent: '500+',
 		},
 		{
-			description: 'return on investment',
-			percent: '345%',
+			description: 'Efficiency gains enabled through integrated solutions',
+			percent: '40%',
 		},
 	];
 
@@ -78,7 +78,7 @@ const Discover = () => {
 					variants={containerVariants}
 					initial='hidden'
 					animate={isInView ? 'visible' : 'hidden'}
-					className='flex flex-row gap-4 items-center justify-between flex-wrap'
+					className='max-w-6xl mx-auto flex flex-row gap-4 items-center justify-between flex-wrap'
 				>
 					{/* Left Column — Heading */}
 					<motion.div
@@ -96,23 +96,23 @@ const Discover = () => {
 					<div className='flex flex-col items-start gap-3'>
 						<motion.p
 							variants={itemVariants}
-							className='text-4xl  text-black max-w-xl'
+							className='text-[clamp(2.1rem,3vw,6rem)] leading-tight font-semibold text-black max-w-4xl'
 						>
-							A global joint venture to expand the frontiers of subsea. Kwo Draent will expand the frontiers of subsea to drive a
-							sustainable energy future.
+							Kwo Draent is a structured ecosystem of operating companies built to advance complex energy and infrastructure
+							projects.
 						</motion.p>
-
+						{/* 
 						<motion.p
 							variants={itemVariants}
 							className='text-sm text-black leading-relaxed max-w-lg'
 						>
 							Businesses using our services see significant efficiency improvements and cost savings.
-						</motion.p>
+						</motion.p> */}
 
 						<motion.a
 							variants={itemVariants}
 							href='#'
-							className='inline-flex items-center gap-2 text-blue-500 font-medium'
+							className='inline-flex items-center gap-2 text-blue-500 font-semibold'
 						>
 							Learn more <GoArrowUpRight className='text-blue-500' />
 						</motion.a>
@@ -123,25 +123,22 @@ const Discover = () => {
 							className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'
 						>
 							{stats.map((stat) => (
-  <motion.div
-    key={stat.percent}
-    variants={statCardVariants}
-    whileHover={{ y: -8, transition: { duration: 0.3 } }}
-    className="p-6 flex flex-col justify-between h-full relative bg-white"
-  >
-    {/* Short vertical line */}
-    <div className="absolute left-0 top-6 bottom-6 w-[2px] bg-gray-300" />
+								<motion.div
+									key={stat.percent}
+									variants={statCardVariants}
+									whileHover={{ y: -8, transition: { duration: 0.3 } }}
+									className='p-6 flex flex-col justify-between h-full relative bg-white'
+								>
+									{/* Short vertical line */}
+									<div className='absolute left-0 top-6 bottom-6 w-[2px] bg-gray-300' />
 
-    <div className="pl-4">
-      <p className="text-5xl text-black">{stat.percent}</p>
+									<div className='pl-4'>
+										<p className='text-5xl text-black'>{stat.percent}</p>
 
-      <p className="mt-4 text-sm text-black">
-        {stat.description}
-      </p>
-    </div>
-  </motion.div>
-))}
-
+										<p className='mt-4 text-sm text-black'>{stat.description}</p>
+									</div>
+								</motion.div>
+							))}
 						</motion.div>
 					</div>
 				</motion.div>
