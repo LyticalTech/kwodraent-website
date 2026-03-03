@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MdArrowOutward } from 'react-icons/md';
+import HeroImage from '@/public/Hero image.webp';
 
 const Hero = () => {
 	const { scrollYProgress } = useScroll();
@@ -47,11 +48,11 @@ const Hero = () => {
 				className='absolute inset-0 -z-10'
 			>
 				<Image
-					src='/Hero image.webp'
+					src={HeroImage}
 					alt='Energy infrastructure background'
 					fill
 					priority
-					className='aspect-auto object-center'
+					className='aspect-auto object-right object-cover sm:object-center'
 				/>
 
 				{/* Professional Dark Overlay */}

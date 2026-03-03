@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoArrowUpRight } from 'react-icons/go';
 
 const Value = () => {
@@ -126,9 +127,11 @@ const Value = () => {
 					</div>
 
 					{/* BUTTON */}
-					<button className='mt-6 w-fit bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition flex items-center gap-2'>
-						Explore More <GoArrowUpRight />
-					</button>
+					<Link href='/what-we-do'>
+						<button className='mt-6 w-fit bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-500 cursor-pointer transition flex items-center gap-2'>
+							Explore More <GoArrowUpRight />
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

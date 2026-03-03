@@ -36,34 +36,36 @@ const cards = [
 
 const OurApproach = () => {
 	return (
-		<div className='p-16  bg-white'>
-			<h2 className='text-3xl font-bold text-gray-800 mb-8'>Our Approach</h2>
-			<div className='mb-20 h-px w-full bg-gray-100' />
-			<div className='grid grid-auto-fit-sm gap-4'>
-				{cards.map((card) => (
-					<div
-						key={card.Id}
-						className='border border-gray-100 rounded-lg p-6 bg-white hover:bg-gray-100 transition duration-300 cursor-pointer'
-					>
-						{/* Image */}
-						<div className=''>
-							<Image
-								src={card.image}
-								alt={card.title}
-								height={80}
-								className='w-full h-40 object-cover'
-								priority
-							/>
+		<div className='px-4 py-16  bg-white'>
+			<div className='max-w-6xl mx-auto'>
+				<h2 className='text-3xl font-bold text-gray-800 mb-8'>Our Approach</h2>
+				<div className='mb-20 h-px w-full bg-gray-100' />
+				<div className='grid grid-auto-fit-sm gap-4'>
+					{cards.map((card) => (
+						<div
+							key={card.Id}
+							className='border border-gray-100 rounded-lg p-6 bg-white hover:bg-gray-100 transition duration-300 cursor-pointer'
+						>
+							{/* Image */}
+							<div className=''>
+								<Image
+									src={card.image}
+									alt={card.title}
+									height={80}
+									className='w-full h-fit max-h-56 object-cover'
+									priority
+								/>
+							</div>
+							{/* Title */}
+							<div className=''>
+								<h3 className='mt-2 text-xl font-semibold text-gray-800'>{card.title}</h3>
+							</div>
+							<div className='mt-2'>
+								<p className='text-gray-500'>{card.disc}</p>
+							</div>
 						</div>
-						{/* Title */}
-						<div className=''>
-							<h3 className='mt-2 text-xl font-semibold text-gray-800'>{card.title}</h3>
-						</div>
-						<div className='mt-2'>
-							<p className='text-gray-500'>{card.disc}</p>
-						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 		</div>
 	);

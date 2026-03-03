@@ -71,7 +71,7 @@ const Discover = () => {
 	return (
 		<section
 			ref={ref}
-			className='bg-white mt-20  pt-16 pb-16'
+			className='bg-white mt-20  sm:pt-16 pb-16'
 		>
 			<Container>
 				<motion.div

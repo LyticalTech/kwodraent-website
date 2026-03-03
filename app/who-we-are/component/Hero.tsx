@@ -52,7 +52,7 @@ const Hero = () => {
 					alt='Energy infrastructure background'
 					fill
 					priority
-					className='aspect-auto object-center'
+					className='aspect-auto object-right sm:object-cover md:object-center'
 				/>
 
 				{/* Professional Dark Overlay */}

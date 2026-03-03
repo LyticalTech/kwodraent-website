@@ -115,38 +115,36 @@ const Footer = () => {
 				<div className='absolute -top-4 -right-32 md:-right-24 lg:-right-6 h-24 w-50 rounded-lg bg-transparent border border-neutral-300/75 border-dashed'></div>
 				<div className='absolute -top-4 -right-32 md:-right-24 lg:-right-6 h-32 w-40 rounded-lg bg-transparent border border-neutral-300/75 border-dashed'></div>
 				<Container>
-					<div className=''>
-						{/* Main Grid */}
-						<div className='flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:grid-rows-[auto_auto] lg:gap-x-8 lg:gap-y-0'>
-							{/* LEFT — Logo & Description */}
-							<div className='lg:col-span-5 space-y-6 py-12 lg:py-16'>
-								<Link
-									href='/'
-									className='flex items-center gap-3'
-								>
-									<Image
-										src='/Kwodraent Logo White.png'
-										height={40}
-										width={200}
-										alt='kwodraent'
-									/>
-								</Link>
+					{/* Main Grid */}
+					<div className='md:grid md:grid-cols-2 md:divide-x md:divide-neutral-500'>
+						{/* LEFT — Logo & Description */}
+						<div className='pt-16 pl-4 pr-4 lg:pr-6'>
+							<Link
+								href='/'
+								className='flex items-center gap-3'
+							>
+								<Image
+									src='/Kwodraent Logo White.png'
+									height={40}
+									width={200}
+									alt='kwodraent'
+								/>
+							</Link>
 
-								<p className='text-gray-300 text-sm md:text-base font-medium leading-relaxed max-w-lg'>
-									Stand out with Energy Max — a stunning, premium Framer website template designed for solar and renewable energy
-									consultants.
-								</p>
-							</div>
+							<p className='mt-2 text-gray-300 text-lg font-medium leading-relaxed max-w-lg'>
+								Your integrated energy solutions partner
+							</p>
+						</div>
 
-							{/* DIVIDER */}
-							<div className='hidden lg:flex lg:col-span-2 lg:row-span-2 justify-center'>
+						{/* DIVIDER */}
+						{/* <div className=''>
 								<div className='w-px h-full bg-neutral-500' />
-							</div>
-
+							</div> */}
+						<div className='pt-8 sm:pt-16 px-4 lg:px-6'>
 							{/* RIGHT — Navigation & Address */}
-							<div className='lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-4 py-12 lg:py-24'>
+							<div className='mt-10 sm:mt-0 sm:grid sm:grid-cols-2'>
 								{/* NAV */}
-								<nav className='flex flex-col space-y-3 md:pt-1'>
+								<nav className='sm:mt-1 flex flex-col space-y-3'>
 									{[
 										['Who We Are', '/who-we-are'],
 										['What We Do', '/what-we-do'],
@@ -165,9 +163,9 @@ const Footer = () => {
 								</nav>
 
 								{/* ADDRESS + SOCIAL */}
-								<div className='space-y-8 md:pt-1'>
-									<div>
-										<h3 className='mt-4 text-gray-300 font-bold text-lg mb-2'>Headquarters</h3>
+								<div className='mt-10 sm:mt-0'>
+									<div className='mt-4'>
+										<h3 className='text-gray-300 font-bold text-lg mb-2'>Headquarters</h3>
 										<address className='not-italic text-white/80 text-[15px] leading-relaxed'>
 											26, Jeremiah Ugwu Street, Lekki Phase 1, Lagos Nigeria
 										</address>
@@ -221,8 +219,8 @@ const Footer = () => {
 							</div>
 
 							{/* BOTTOM — RIGHT Side Only */}
-							<div className='lg:col-span-5 lg:col-start-8 mt-4 mb-20'>
-								<p className='text-white text-sm'>© Copyright 2026 Taclient.ai – All rights reserved.</p>
+							<div className='mt-28 pb-10 flex items-center justify-center md:justify-start'>
+								<p className='text-gray-400 text-sm'>© Copyright 2026 Kwo Draent – All rights reserved.</p>
 							</div>
 						</div>
 					</div>
