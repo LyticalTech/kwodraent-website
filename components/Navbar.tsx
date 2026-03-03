@@ -171,7 +171,7 @@ const Navbar = () => {
 					{/* Mobile Toggle */}
 					<button
 						onClick={toggleMenu}
-						className='md:hidden flex flex-col cursor-pointer gap-1.5'
+						className='md:hidden flex flex-col cursor-pointer gap-1.5 mr-2'
 					>
 						<span className={`w-6 h-0.5 transition ${isWhiteBg ? 'bg-black' : 'bg-white'}`} />
 						<span className={`w-6 h-0.5 transition ${isWhiteBg ? 'bg-black' : 'bg-white'}`} />
@@ -182,7 +182,7 @@ const Navbar = () => {
 
 			{/* Mobile Menu */}
 			<div
-				className={`md:hidden fixed inset-x-0 top-20 bg-white shadow-lg transition-all duration-300 ${
+				className={`md:hidden fixed inset-x-0 top-16 pb-28 bg-white shadow-lg transition-all duration-300 ${
 					isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
 				}`}
 			>

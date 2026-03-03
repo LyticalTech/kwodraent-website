@@ -17,7 +17,7 @@ const cards = [
 		icon: KwodraentLogo,
 		title: 'Kwodraent Oil & Gas Limited',
 		subtitle: 'Strategic Energy Partnerships',
-		description: 'Unlimited website design requests with fast delivery, ensuring your brand stays modern and professional.',
+		description: 'A strategic energy platform for asset development, EPC consortia, vessel, and rig supply.',
 		image: '/assets/KD group 1.png',
 		link: '/',
 	},
@@ -26,7 +26,8 @@ const cards = [
 		icon: XastraLogo,
 		title: 'Xastra Limited',
 		subtitle: 'Oil & Gas Support Services',
-		description: 'Unlimited development tasks, bug fixes, and updates to keep your website fast, secure and scalable.',
+		description:
+			'Oil and gas support services covering manpower supply, supply chain optimization, and commercial support for project delivery.',
 		image: '/KD group 2.webp',
 		link: '/',
 	},
@@ -35,7 +36,7 @@ const cards = [
 		icon: SchisteLogo,
 		title: 'Schiste Intergrated Energy Services',
 		subtitle: 'Marine Operattions & Training',
-		description: 'Continous branding support with unlimited request for logos, guidelines and visual identity updates.',
+		description: 'Marine-focused energy services, manpower, and training support company',
 		image: '/assets/KD group 3.png',
 		link: '/',
 	},
@@ -44,7 +45,7 @@ const cards = [
 		icon: LedenLogo,
 		title: 'Leden Energy Limited',
 		subtitle: 'Global Energy Ventures',
-		description: 'Unlimited ad creatives, social media designs and campaign visuals delivered fast and on brand.',
+		description: 'Leveraging cross-border capabilities for selective energy assets development through partnerships and ventures',
 		image: '/assets/KDgroup4.png',
 		link: '/',
 	},
@@ -53,7 +54,7 @@ const cards = [
 		icon: LyticalLogo,
 		title: 'Lytical Technologies Limited',
 		subtitle: 'Flagship IT & Digital Solutions',
-		description: 'Unlimited UI/UX design requests with ongoing improvements for web apps, dashboards and digital products.',
+		description: 'Delivering scalable software platforms, high-performance database systems, and end-to-end IT solutions.',
 		image: '/assets/KD group 5.png',
 		link: '/',
 	},
@@ -62,7 +63,7 @@ const cards = [
 		icon: SwapsLogo,
 		title: 'SWAPS Synergy Limited',
 		subtitle: 'High-Value Projects & Asset Development',
-		description: 'Ongoing e-commerce design and development with unlimited requests for updates and improvements.',
+		description: 'High-value projects, asset acquisition, and complex energy developments.',
 		image: '/assets/KD group 6.jpg',
 		link: '/',
 	},
@@ -80,8 +81,9 @@ const Subsidaries = () => {
 					</h1>
 
 					<p className='text-white max-w-3xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-[1.5]'>
-						Explore Orix services designed to elevate brands. From creative design to digital solutions, we craft impactful
-						results that drive growth.
+						The Kwo Draent Group brings together technology, operations, manpower, marine services, asset development, and
+						strategic partnerships. Together, our companies move energy opportunities from origination to execution, across Africa
+						and beyond.
 					</p>
 				</div>
 				<div className='px-4'>

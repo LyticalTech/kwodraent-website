@@ -25,8 +25,8 @@ const cards = [
 
 const ImageSection = () => {
 	return (
-		<section className='p-16  bg-black'>
-			<div className='grid grid-auto-fit-md gap-8'>
+		<section className='px-4 py-16 bg-black'>
+			<div className='max-w-5xl mx-auto grid grid-auto-fit-md gap-8'>
 				{cards.map((card) => (
 					<a
 						key={card.title}
