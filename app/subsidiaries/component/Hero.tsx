@@ -64,8 +64,8 @@ const Hero = () => {
 						variants={fadeUp}
 						className='flex flex-col'
 					>
-						<h2 className='max-w-xl text-[clamp(2.6rem,3.8vw,6rem)] text-gray-800 leading-[1.05] tracking-tight'>
-							Specialized Capabilities. <span className='text-neutral-500'>Integrated Delivery.</span>
+						<h2 className='text-[clamp(2.6rem,3.8vw,6rem)] text-gray-800 leading-[1.05] tracking-tight'>
+							Specialized Capabilities. <br /> <span className='text-neutral-500'>Integrated Delivery.</span>
 						</h2>
 
 						<p className='mt-6 max-w-5xl text-[clamp(1.05rem,1.5vw,1.3rem)] text-gray-700 leading-[1.5]'>

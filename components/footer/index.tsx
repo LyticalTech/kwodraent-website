@@ -68,7 +68,7 @@ const Footer = () => {
 					>
 						{/* Heading */}
 						<motion.h1
-							className='text-[clamp(2.2rem,4vw,6rem)] font-semibold text-white leading-tight'
+							className='text-[clamp(2.2rem,4vw,6rem)] font-light text-white leading-tight'
 							variants={itemVariants}
 						>
 							Discover The Kwo Draent Advantage
@@ -84,7 +84,7 @@ const Footer = () => {
 								className='w-full sm:w-auto'
 							>
 								<motion.button
-									className='w-full cursor-pointer sm:w-auto px-6 md:px-8 py-3 bg-white text-blue-600 rounded-full font-medium transition-colors hover:bg-black hover:text-white'
+									className='w-full cursor-pointer sm:w-auto px-6 md:px-8 py-3 bg-white text-blue-600 rounded-full font-thin transition-colors hover:bg-black hover:text-white'
 									variants={buttonVariants}
 									whileHover='hover'
 									whileTap='tap'
@@ -98,7 +98,7 @@ const Footer = () => {
 								className='w-full sm:w-auto'
 							>
 								<motion.button
-									className='w-full cursor-pointer sm:w-auto px-6 md:px-8 py-3 border border-white text-white rounded-full font-medium transition-colors hover:bg-black hover:text-white'
+									className='w-full cursor-pointer sm:w-auto px-6 md:px-8 py-3 border border-white text-white rounded-full font-thin transition-colors hover:bg-black hover:text-white'
 									variants={buttonVariants}
 									whileHover='hover'
 									whileTap='tap'
@@ -131,8 +131,8 @@ const Footer = () => {
 								/>
 							</Link>
 
-							<p className='mt-2 text-gray-300 text-lg font-medium leading-relaxed max-w-lg'>
-								Your integrated energy solutions partner
+							<p className='mt-2 text-gray-300 text-lg font-extralight leading-relaxed max-w-lg'>
+								Your Integrated Energy Solutions Partner
 							</p>
 						</div>
 
@@ -140,7 +140,7 @@ const Footer = () => {
 						{/* <div className=''>
 								<div className='w-px h-full bg-neutral-500' />
 							</div> */}
-						<div className='pt-8 sm:pt-16 px-4 lg:px-6'>
+						<div className='pt-8 sm:pt-16 px-4 lg:px-6 '>
 							{/* RIGHT — Navigation & Address */}
 							<div className='mt-10 sm:mt-0 sm:grid sm:grid-cols-2'>
 								{/* NAV */}
@@ -155,7 +155,7 @@ const Footer = () => {
 										<Link
 											key={label}
 											href={href}
-											className='text-gray-300 text-[15px] font-medium text-sm hover:text-white/70 transition w-fit'
+											className='text-gray-300 text-[15px] font-extralight text-sm hover:text-white/70 transition w-fit'
 										>
 											{label}
 										</Link>
@@ -163,10 +163,10 @@ const Footer = () => {
 								</nav>
 
 								{/* ADDRESS + SOCIAL */}
-								<div className='mt-10 sm:mt-0'>
-									<div className='mt-4'>
-										<h3 className='text-gray-300 font-bold text-lg mb-2'>Headquarters</h3>
-										<address className='not-italic text-white/80 text-[15px] leading-relaxed'>
+								<div className=''>
+									<div className=''>
+										<h3 className='text-gray-300 font-bold text-lg mb-2 font-light'>Headquarters</h3>
+										<address className='not-italic text-white/80 text-[15px] leading-relaxed font-extralight'>
 											26, Jeremiah Ugwu Street, Lekki Phase 1, Lagos Nigeria
 										</address>
 									</div>

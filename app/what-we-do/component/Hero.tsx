@@ -23,28 +23,31 @@ const items: ServiceItem[] = [
 	{
 		value: 'asset',
 		title: 'Asset Development & Delivery',
-		description: 'Conversion-focused websites are built for speed, trust, and lead generation.',
+		description:
+			'From concept to commissioning. Technical design, project management, and drilling support delivered with capital discipline.',
 		tags: ['Asset development & management', 'Project management', 'Drilling & drilling support'],
 		image: WhoWeAreOne,
 	},
 	{
 		value: 'operations',
 		title: 'Operations & Performance',
-		description: 'Robust SaaS platforms tailored for growth, scalability, and performance.',
+		description:
+			'Safe, reliable asset execution. We maintain uptime and extend asset life through structured operational standards.',
 		tags: ['Operations & maintenance', 'Marine services'],
 		image: WhoWeAreTwo,
 	},
 	{
 		value: 'supply',
 		title: 'Supply Chain & Logistics Integration',
-		description: 'Streamline operations with seamless business system integrations.',
+		description: 'One execution layer across vendors, procurement, and marine logistics. Less friction, lower cost.',
 		tags: ['Supply chain', 'Marine logistics'],
 		image: WhoWeAreThree,
 	},
 	{
 		value: 'digital',
 		title: 'Capability & Digital Enablement',
-		description: 'Enabling smarter decision-making through digital strategy.',
+		description:
+			'Skilled workforce combined with digital systems and technology to drive measurable performance gains across every operation.',
 		tags: ['Manpower & training', 'Digital transformation'],
 		image: WhoWeAreFour,
 	},

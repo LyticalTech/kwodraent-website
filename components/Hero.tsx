@@ -82,7 +82,7 @@ const Hero = () => {
 						{/* Heading */}
 						<motion.h1
 							variants={itemVariants}
-							className='text-[clamp(2.6rem,4.8vw,6rem)] text-white leading-[1.05] tracking-tight'
+							className='text-[clamp(2.8rem,4.8vw,6rem)] text-white leading-[1.05] tracking-tight font-light'
 						>
 							<motion.span
 								initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ const Hero = () => {
 						{/* Paragraph */}
 						<motion.p
 							variants={itemVariants}
-							className='mt-8 max-w-2xl text-[clamp(1.05rem,1.4vw,1.3rem)] text-white/85 leading-[1.75]'
+							className='mt-8 max-w-2xl text-[clamp(1.05rem,1.4vw,1.3rem)] text-white/85 leading-[1.75] font-extralight'
 						>
 							We structure and deliver high-impact ventures across energy, infrastructure, and digital systems — building
 							resilient, future-ready enterprises.
@@ -119,7 +119,7 @@ const Hero = () => {
 						>
 							<Link
 								href='/what-we-do'
-								className='text-white/80 text-xl hover:text-white transition font-medium flex items-center gap-1'
+								className='text-white/80 text-xl hover:text-white transition font-thin flex items-center gap-1'
 							>
 								Learn More{' '}
 								<span className='ml-1'>

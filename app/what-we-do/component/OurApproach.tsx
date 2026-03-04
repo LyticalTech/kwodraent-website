@@ -30,13 +30,13 @@ const cards = [
 		Id: 4,
 		image: ExecutionIcon,
 		title: 'Integrated Execution',
-		disc: 'Engineering, marine, supply chain, and digital functions alighned within a single delivery structure.',
+		disc: 'Engineering, marine, supply chain, and digital functions aligned within a single delivery structure.',
 	},
 ];
 
 const OurApproach = () => {
 	return (
-		<div className='px-4 py-16  bg-white'>
+		<div className='px-4 py-40  bg-white'>
 			<div className='max-w-6xl mx-auto'>
 				<h2 className='text-3xl font-bold text-gray-800 mb-8'>Our Approach</h2>
 				<div className='mb-20 h-px w-full bg-gray-100' />

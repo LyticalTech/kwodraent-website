@@ -66,9 +66,8 @@ const Hero = () => {
 				</h1>
 
 				<div className='flex flex-col w-full items-start'>
-					<h2 className='text-[clamp(2rem,3vw,4rem)] text-gray-800 font-semibold'>Partnerships</h2>
-
-					<p className='text-gray-800 text-[clamp(1.2rem,1.2vw,2.5rem)] leading-snug max-w-5xl'>
+					<h2 className='text-[clamp(2.6rem,3.8vw,6rem)] text-gray-800 leading-[1.05] tracking-tight'>Partnerships</h2>
+					<p className='mt-6 max-w-5xl text-[clamp(1.05rem,1.5vw,1.3rem)] text-gray-700 leading-[1.5]'>
 						We are proud to collaborate with partners whose expertise and regional strength expand what we can achieve together
 					</p>
 				</div>

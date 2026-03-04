@@ -68,7 +68,7 @@ const Navbar = () => {
 									className=''
 								>
 									<button
-										className={`text-[15px] font-medium transition flex items-center gap-1 focus:outline-none cursor-pointer ${
+										className={`text-[15px] font-extralight transition flex items-center gap-1 focus:outline-none cursor-pointer ${
 											isWhiteBg ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-gray-300'
 										}`}
 									>
@@ -90,7 +90,7 @@ const Navbar = () => {
 								<DropdownMenuContent
 									align='start'
 									sideOffset={8}
-									className='bg-black w-48 rounded-xl shadow-2xl px-2 py-3 border border-gray-400'
+									className='bg-black w-48  rounded-xl shadow-2xl px-2 py-3 border border-gray-400'
 								>
 									<DropdownMenuItem asChild>
 										<Link
@@ -130,7 +130,7 @@ const Navbar = () => {
 
 						<Link
 							href='/what-we-do'
-							className={`text-[15px] font-medium transition ${
+							className={`text-[15px] font-extralight transition ${
 								isWhiteBg ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-gray-300'
 							}`}
 						>
@@ -139,7 +139,7 @@ const Navbar = () => {
 
 						<Link
 							href='/subsidiaries'
-							className={`text-[15px] font-medium transition ${
+							className={`text-[15px] font-extralight transition ${
 								isWhiteBg ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-gray-300'
 							}`}
 						>
@@ -148,7 +148,7 @@ const Navbar = () => {
 
 						<Link
 							href='/partnerships'
-							className={`text-[15px] font-medium transition ${
+							className={`text-[15px] font-extralight transition ${
 								isWhiteBg ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-gray-300'
 							}`}
 						>
@@ -159,7 +159,7 @@ const Navbar = () => {
 					{/* Contact Button */}
 					<Link
 						href='/contact'
-						className={`hidden md:block px-6 py-2.5 rounded-lg text-sm font-medium transition ${
+						className={`hidden md:block px-6 py-2.5 rounded-lg text-sm font-extralight transition ${
 							isWhiteBg
 								? 'bg-blue-600 text-white hover:bg-blue-500'
 								: 'border border-white/60 text-white hover:bg-gray-800 duration-500 ease-in-out'

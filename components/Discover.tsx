@@ -12,14 +12,17 @@ const Discover = () => {
 		{
 			description: 'Years of combined leadership and sector experience across energy and technology',
 			percent: '100+',
+			top: 0,
 		},
 		{
 			description: 'Energy & Infrastructure Projects Executed',
 			percent: '500+',
+			top: 50,
 		},
 		{
 			description: 'Efficiency gains enabled through integrated solutions',
 			percent: '40%',
+			top: 90,
 		},
 	];
 
@@ -71,14 +74,14 @@ const Discover = () => {
 	return (
 		<section
 			ref={ref}
-			className='bg-white mt-20  sm:pt-16 pb-16'
+			className='bg-white  sm:pt-16 pb-16'
 		>
 			<Container>
 				<motion.div
 					variants={containerVariants}
 					initial='hidden'
 					animate={isInView ? 'visible' : 'hidden'}
-					className='max-w-6xl mx-auto flex flex-row gap-4 items-center justify-between flex-wrap'
+					className='max-w-6xl mx-auto flex flex-row gap-6 items-center justify-between flex-wrap'
 				>
 					{/* Left Column — Heading */}
 					<motion.div
@@ -86,7 +89,7 @@ const Discover = () => {
 						className='flex items-start'
 					>
 						<h2 className='text-base flex items-center gap-2 '>
-							<div className='w-4 h-1 bg-blue-500'></div>
+							<div className='w-4 h-1 bg-blue-500 font-extralight'></div>
 							Who We Are
 						</h2>
 					</motion.div>
@@ -95,7 +98,7 @@ const Discover = () => {
 					<div className='flex flex-col items-start gap-3'>
 						<motion.p
 							variants={itemVariants}
-							className='text-[clamp(2.1rem,3vw,6rem)] leading-tight font-semibold text-black max-w-4xl'
+							className='text-[clamp(2.1rem,3vw,6rem)] leading-tight font-light text-black max-w-6xl'
 						>
 							Kwo Draent is a structured ecosystem of operating companies built to advance complex energy and infrastructure
 							projects.
@@ -107,14 +110,6 @@ const Discover = () => {
 						>
 							Businesses using our services see significant efficiency improvements and cost savings.
 						</motion.p> */}
-
-						<motion.a
-							variants={itemVariants}
-							href='#'
-							className='inline-flex items-center gap-2 text-blue-500 font-semibold'
-						>
-							Learn more <GoArrowUpRight className='text-blue-500' />
-						</motion.a>
 
 						{/* Stats Grid */}
 						<motion.div
@@ -130,15 +125,24 @@ const Discover = () => {
 								>
 									{/* Short vertical line */}
 									<div className='absolute left-0 top-6 bottom-6 w-[2px] bg-gray-300' />
+									<div className={`absolute top-${stat.top} left-0 h-8 w-2 bg-blue-700 rounded-r-sm`}  style={{top: stat.top}}/>
 
 									<div className='pl-4'>
-										<p className='text-5xl text-black'>{stat.percent}</p>
+										<p className='text-5xl text-black font-light'>{stat.percent}</p>
 
-										<p className='mt-4 text-sm text-black'>{stat.description}</p>
+										<p className='mt-4 text-sm text-black font-extralight'>{stat.description}</p>
 									</div>
 								</motion.div>
 							))}
 						</motion.div>
+
+						<motion.a
+							variants={itemVariants}
+							href='#'
+							className='inline-flex items-center gap-2 text-blue-500 font-thin mt-4'
+						>
+							Learn more <GoArrowUpRight className='text-blue-500' />
+						</motion.a>
 					</div>
 				</motion.div>
 			</Container>

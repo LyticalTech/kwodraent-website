@@ -1,6 +1,6 @@
-import ServicesSection from './component/ ServicesSection';
-import Approach from './component/Approach';
-import Categories from './component/Categories';
+// import ServicesSection from './component/ ServicesSection';
+// import Approach from './component/Approach';
+// import Categories from './component/Categories';
 import Hero from './component/Hero';
 import ImageSection from './component/ImageSection';
 import OurApproach from './component/OurApproach';
