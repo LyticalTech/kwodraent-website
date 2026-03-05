@@ -55,10 +55,10 @@ const Footer = () => {
 	return (
 		<footer className='bg-white overflow-hidden'>
 			<div className='relative w-full bg-blue-700'>
-				<div className='absolute -top-4 -left-32 md:-left-24 lg:-left-6 h-16 w-60 rounded-lg bg-transparent border border-neutral-300/75 border-dashed '></div>
-				<div className='absolute -top-4 -left-32 md:-left-24 lg:-left-6 h-24 w-50 rounded-lg bg-transparent border border-neutral-300/75 border-dashed '></div>
-				<div className='absolute -top-4 -left-32 md:-left-24 lg:-left-6 h-32 w-40 rounded-lg bg-transparent border border-neutral-300/75 border-dashed '></div>
-				<Container className='relative py-24 z-10'>
+				<div className='absolute -top-4 -left-32 md:-left-24 lg:-left-6 h-14 w-60 rounded-lg bg-transparent border-2 border-neutral-300/70 border-dashed '></div>
+				<div className='absolute -top-4 -left-32 md:-left-24 lg:-left-6 h-24 w-50 rounded-lg bg-transparent border-2 border-neutral-300/70 border-dashed '></div>
+				<div className='absolute -top-4 -left-32 md:-left-24 lg:-left-6 h-32 w-40 rounded-lg bg-transparent border-2 border-neutral-300/70 border-dashed '></div>
+				<Container className='relative py-28 z-10'>
 					<motion.div
 						className=' flex flex-col items-center text-center max-w-3xl mx-auto px-4'
 						variants={containerVariants}
@@ -109,11 +109,11 @@ const Footer = () => {
 						</motion.div>
 					</motion.div>
 				</Container>
+				<div className='absolute -bottom-4 -right-32 md:-right-24 lg:-right-6 h-14 w-60 rounded-lg bg-transparent border-2 border-neutral-300/70 border-dashed'></div>
+				<div className='absolute -bottom-4 -right-32 md:-right-24 lg:-right-6 h-24 w-50 rounded-lg bg-transparent border-2 border-neutral-300/70 border-dashed'></div>
+				<div className='absolute -bottom-4 -right-32 md:-right-24 lg:-right-6 h-32 w-40 rounded-lg bg-transparent border-2 border-neutral-300/70 border-dashed'></div>
 			</div>
 			<div className='relative w-full bg-black border-t border-white/5 overflow-hidden'>
-				<div className='absolute -top-4 -right-32 md:-right-24 lg:-right-6 h-16 w-60 rounded-lg bg-transparent border border-neutral-300/75 border-dashed'></div>
-				<div className='absolute -top-4 -right-32 md:-right-24 lg:-right-6 h-24 w-50 rounded-lg bg-transparent border border-neutral-300/75 border-dashed'></div>
-				<div className='absolute -top-4 -right-32 md:-right-24 lg:-right-6 h-32 w-40 rounded-lg bg-transparent border border-neutral-300/75 border-dashed'></div>
 				<Container>
 					{/* Main Grid */}
 					<div className='md:grid md:grid-cols-2 md:divide-x md:divide-neutral-500'>
