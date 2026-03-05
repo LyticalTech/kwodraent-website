@@ -51,7 +51,7 @@ const ImageSection = () => {
 
 						{/* Title + Button */}
 						<div className='mt-4'>
-							<h3 className='text-2xl font-semibold text-white'>{card.title}</h3>
+							<h3 className='text-2xl font-light text-white'>{card.title}</h3>
 							<div className='mt-8 w-fit bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2.5 rounded-lg transition-colors duration-300'>
 								Read More
 							</div>

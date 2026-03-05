@@ -3,8 +3,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MdArrowOutward } from 'react-icons/md';
 import HeroImage from '@/public/Hero image.webp';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const Hero = () => {
 	const { scrollYProgress } = useScroll();
@@ -82,7 +82,7 @@ const Hero = () => {
 						{/* Heading */}
 						<motion.h1
 							variants={itemVariants}
-							className='text-[clamp(2.8rem,4.8vw,6rem)] text-white leading-[1.05] tracking-tight font-light'
+							className='text-[clamp(2.8rem,4.8vw,6rem)] text-white leading-[1.05] tracking-tight font-normal'
 						>
 							<motion.span
 								initial={{ opacity: 0, y: 20 }}
@@ -115,15 +115,15 @@ const Hero = () => {
 						{/* CTA Buttons */}
 						<motion.div
 							variants={itemVariants}
-							className='mt-8'
+							className=''
 						>
 							<Link
 								href='/what-we-do'
-								className='text-white/80 text-xl hover:text-white transition font-thin flex items-center gap-1'
+								className='inline-flex items-center gap-2 text-white font-normal hover:text-gray-300 transition duration-300 mt-4'
 							>
 								Learn More{' '}
 								<span className='ml-1'>
-									<MdArrowOutward className='size-6' />
+									<GoArrowUpRight className='' />
 								</span>
 							</Link>
 						</motion.div>

@@ -74,13 +74,13 @@ const Subsidaries = () => {
 		<section className='bg-black py-16'>
 			<Container>
 				{/* TOP SECTION RESPONSIVE */}
-				<div className='px-4 flex flex-col lg:flex-row lg:items-baseline lg:justify-between gap-6 lg:gap-10'>
+				<div className='px-4 flex flex-col gap-6 lg:gap-10'>
 					<h1 className='mt-10 md:text-base text-sm text-white flex font-medium items-center gap-2 tracking-wide'>
 						<div className='w-4 h-1 bg-blue-600' />
 						The Kwo Draent Group
 					</h1>
 
-					<p className='text-white max-w-3xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-[1.5]'>
+					<p className='text-white max-w-5xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-[1.5]'>
 						The Kwo Draent Group brings together technology, operations, manpower, marine services, asset development, and
 						strategic partnerships. Together, our companies move energy opportunities from origination to execution, across Africa
 						and beyond.
@@ -107,7 +107,7 @@ const Subsidaries = () => {
 							/>
 
 							{/* DARK OVERLAY */}
-							<div className='absolute group inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500' />
+							<div className='absolute group inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500' />
 
 							{/* COMPANY LOGO */}
 							{/* SMALL ICON */}
@@ -127,7 +127,7 @@ const Subsidaries = () => {
 							{/* TEXT */}
 							<div className='relative z-20'>
 								<h2 className='text-xl font-semibold text-white'>{card.title}</h2>
-								<h3 className='text-xs text-gray-300 font-light group-hover:text-white leading-relaxed transition duration-500'>
+								<h3 className='text-base text-gray-300 font-light group-hover:text-white leading-relaxed transition duration-500'>
 									({card.subtitle})
 								</h3>
 								<p className='text-base mt-4 text-gray-300 leading-relaxed'>{card.description}</p>

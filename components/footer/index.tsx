@@ -164,8 +164,8 @@ const Footer = () => {
 
 								{/* ADDRESS + SOCIAL */}
 								<div className=''>
-									<div className=''>
-										<h3 className='text-gray-300 font-bold text-lg mb-2 font-light'>Headquarters</h3>
+									<div className='mt-10 sm:mt-0'>
+										<h3 className='text-gray-300 font-bold text-lg mb-2'>Headquarters</h3>
 										<address className='not-italic text-white/80 text-[15px] leading-relaxed font-extralight'>
 											26, Jeremiah Ugwu Street, Lekki Phase 1, Lagos Nigeria
 										</address>

@@ -6,6 +6,24 @@ import Image from 'next/image';
 import { MdArrowOutward } from 'react-icons/md';
 import WhoWeAreImage from '@/public/assets/whoWeAre.jpg';
 
+const stats = [
+	{
+		description: 'Years of combined leadership and sector experience across energy and technology',
+		percent: '100+',
+		top: 0,
+	},
+	{
+		description: 'Energy & Infrastructure Projects Executed',
+		percent: '500+',
+		top: 50,
+	},
+	{
+		description: 'Efficiency gains enabled through integrated solutions',
+		percent: '40%',
+		top: 90,
+	},
+];
+
 const Hero = () => {
 	const { scrollYProgress } = useScroll();
 
@@ -40,6 +58,24 @@ const Hero = () => {
 		},
 	};
 
+	// Stats card animation with scale
+	const statCardVariants = {
+		hidden: {
+			opacity: 0,
+			y: 40,
+			scale: 0.95,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			transition: {
+				duration: 0.7,
+				ease: [0.22, 1, 0.36, 1] as const,
+			},
+		},
+	};
+
 	return (
 		<section className='relative w-full min-h-screen flex items-center overflow-hidden shadow-gray-700 border-b-20 border-black/90'>
 			{/* Background Image */}
@@ -52,7 +88,7 @@ const Hero = () => {
 					alt='Energy infrastructure background'
 					fill
 					priority
-					className='aspect-auto object-right sm:object-cover md:object-center'
+					className='aspect-auto object-left sm:object-cover md:object-center'
 				/>
 
 				{/* Professional Dark Overlay */}
@@ -90,7 +126,7 @@ const Hero = () => {
 						</motion.h1>
 						<motion.h2
 							variants={itemVariants}
-							className='mt-6 text-[clamp(2.2rem,3.6vw,5rem)] font-mediu text-white leading-[1.1] tracking-tight'
+							className='mt-6 text-[clamp(2.6rem,3.8vw,6rem)] font-mediu text-white leading-[1.1] tracking-tight'
 						>
 							We are Kwo Draent.
 						</motion.h2>
@@ -101,7 +137,7 @@ const Hero = () => {
 							Africa’s energy landscape is opening to indigenous participation at scale. We integrate technical depth, sector
 							experience and commercial rigor to deliver energy and industrial solutions safely, efficiently, and reliably.
 						</motion.p>
-						<motion.div
+						{/* <motion.div
 							variants={itemVariants}
 							className='mt-12 grid md:grid-cols-3 gap-12 text-white'
 						>
@@ -142,6 +178,32 @@ const Hero = () => {
 									Efficiency gains enabled through integrated solutions
 								</motion.p>
 							</motion.div>
+						</motion.div> */}
+						<motion.div
+							variants={containerVariants}
+							className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8'
+						>
+							{stats.map((stat) => (
+								<motion.div
+									key={stat.percent}
+									variants={statCardVariants}
+									whileHover={{ y: -8, transition: { duration: 0.3 } }}
+									className='p-6 flex flex-col justify-between h-full relative bg-transparent'
+								>
+									{/* Short vertical line */}
+									<div className='absolute left-0 top-6 bottom-6 w-[2px] bg-gray-300' />
+									<div
+										className={`absolute top-${stat.top} left-0 h-8 w-2 bg-blue-700 rounded-r-sm`}
+										style={{ top: stat.top }}
+									/>
+
+									<div className='pl-4'>
+										<p className='text-5xl text-white font-light'>{stat.percent}</p>
+
+										<p className='mt-4 text-base text-white font-extralight'>{stat.description}</p>
+									</div>
+								</motion.div>
+							))}
 						</motion.div>
 					</div>
 				</motion.div>

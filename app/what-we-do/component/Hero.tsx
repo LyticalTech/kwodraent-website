@@ -59,7 +59,7 @@ const Hero = () => {
 
 	return (
 		<section className='w-full bg-black py-12'>
-			<div className='max-w-5xl mx-auto px-4'>
+			<div className='max-w-6xl mx-auto px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -74,11 +74,11 @@ const Hero = () => {
 
 					{/* content row */}
 					<div className='flex flex-col w-full'>
-						<h3 className='text-white text-[clamp(2.6rem,3vw,6rem)] leading-[1.05] font-semibold tracking-tight mb-4'>
+						<h3 className='text-[clamp(2.6rem,3.8vw,6rem)] font-mediu text-white leading-[1.1] tracking-tight'>
 							Advancing energy development.
 						</h3>
 
-						<p className='text-[clamp(1.5rem,1.3vw,3rem)] text-white leading-relaxed'>
+						<p className='mt-4 max-w-5xl text-[clamp(1.05rem,1.4vw,1.3rem)] text-white/85 leading-[1.6]'>
 							We are your energy solutions partner and we operate across four integrated pillars:
 						</p>
 					</div>

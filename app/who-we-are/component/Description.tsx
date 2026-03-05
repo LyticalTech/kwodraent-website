@@ -52,7 +52,7 @@ const Description = () => {
 
 						{/* Title + Button */}
 						<div className='mt-4'>
-							<h3 className='text-2xl font-semibold text-gray-800'>{card.title}</h3>
+							<h3 className='text-2xl font-light text-gray-800'>{card.title}</h3>
 							<span className='inline-block mt-4 px-5 py-2 text-sm border border-gray-800 text-gray-800 rounded-md transition-colors duration-300 group-hover:bg-gray-800 group-hover:text-white'>
 								Read More
 							</span>

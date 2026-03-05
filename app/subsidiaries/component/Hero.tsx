@@ -48,7 +48,7 @@ const Hero = () => {
 					variants={containerVariants}
 					initial='hidden'
 					animate='show'
-					className='flex flex-col items-start w-full gap-6'
+					className='max-w-6xl mx-auto flex flex-col items-start w-full gap-6'
 				>
 					{/* TOP LABEL */}
 					<motion.h1
