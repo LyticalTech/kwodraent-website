@@ -82,7 +82,7 @@ const Hero = () => {
 						{/* Heading */}
 						<motion.h1
 							variants={itemVariants}
-							className='text-[clamp(2.8rem,4.8vw,6rem)] text-white leading-[1.05] tracking-tight font-normal'
+							className='text-[clamp(2.8rem,4.8vw,6rem)] text-white leading-[1.3] tracking-tight font-normal'
 						>
 							<motion.span
 								initial={{ opacity: 0, y: 20 }}

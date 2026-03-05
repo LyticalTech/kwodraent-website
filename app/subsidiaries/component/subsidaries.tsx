@@ -91,29 +91,29 @@ const Subsidaries = () => {
 				</div>
 
 				{/* GRID */}
-				<div className='px-4 grid grid-auto-fit-lg gap-6 mt-20'>
+				<div className='px-4 grid grid-auto-fit-lg gap-6 mt-20 mb-10'>
 					{cards.map((card) => (
 						<Link
 							key={card.id}
 							href={card.link}
-							className='relative group rounded-xl overflow-hidden border border-gray-800 bg-neutral-900 p-6 flex flex-col items-start gap-4 hover:bg-neutral-800 transition duration-300'
+							className='relative group rounded-xl overflow-hidden border border-gray-800 bg-neutral-900 p-6 flex flex-col items-start gap-4 transition duration-200'
 						>
-							{/* BG IMAGE */}
+							{/* IMAGE (VISIBLE BY DEFAULT) */}
 							<Image
 								src={card.image}
 								alt={card.subtitle}
 								fill
-								className='object-cover opacity-0 group-hover:opacity-100 transition duration-500'
+								className='object-cover opacity-40 group-hover:opacity-100 transition duration-300'
 							/>
 
-							{/* DARK OVERLAY */}
-							<div className='absolute group inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500' />
+							{/* BLACK OVERLAY ON HOVER */}
+							<div className='absolute inset-0 bg-black opacity-0 group-hover:opacity-100 transition duration-300' />
 
-							{/* COMPANY LOGO */}
-							{/* SMALL ICON */}
-							<div className=' z-20 text-gray-400'>
+							{/* CONTENT */}
+							<div className='relative z-20 text-gray-400'>
 								<GoNorthStar className='w-5 h-5 md:w-6 md:h-6' />
 							</div>
+
 							<div className='mt-16 relative z-20'>
 								<Image
 									src={card.icon}
@@ -124,17 +124,11 @@ const Subsidaries = () => {
 								/>
 							</div>
 
-							{/* TEXT */}
 							<div className='relative z-20'>
 								<h2 className='text-xl font-semibold text-white'>{card.title}</h2>
-								<h3 className='text-base text-gray-300 font-light group-hover:text-white leading-relaxed transition duration-500'>
-									({card.subtitle})
-								</h3>
+								<h3 className='text-base text-gray-300 font-light leading-relaxed'>({card.subtitle})</h3>
 								<p className='text-base mt-4 text-gray-300 leading-relaxed'>{card.description}</p>
 							</div>
-
-							{/* BASE BG */}
-							<div className='absolute inset-0 bg-neutral-900 group-hover:opacity-0 transition duration-500' />
 						</Link>
 					))}
 				</div>
