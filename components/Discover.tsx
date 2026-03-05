@@ -74,7 +74,7 @@ const Discover = () => {
 	return (
 		<section
 			ref={ref}
-			className='bg-white  sm:pt-16 pb-16'
+			className='bg-white  pt-16 pb-16'
 		>
 			<Container>
 				<motion.div
@@ -98,7 +98,7 @@ const Discover = () => {
 					<div className='flex flex-col items-start gap-3'>
 						<motion.p
 							variants={itemVariants}
-							className='text-[clamp(2.1rem,3vw,6rem)] leading-tight font-light text-black max-w-6xl'
+							className='text-[clamp(2rem,2.5vw,6rem)] leading-tight font-light text-black max-w-6xl'
 						>
 							Kwo Draent is a structured ecosystem of operating companies built to advance complex energy and infrastructure
 							projects.
@@ -125,12 +125,15 @@ const Discover = () => {
 								>
 									{/* Short vertical line */}
 									<div className='absolute left-0 top-6 bottom-6 w-[2px] bg-gray-300' />
-									<div className={`absolute top-${stat.top} left-0 h-8 w-2 bg-blue-700 rounded-r-sm`}  style={{top: stat.top}}/>
+									<div
+										className={`absolute top-${stat.top} left-0 h-8 w-2 bg-blue-700 rounded-r-sm`}
+										style={{ top: stat.top }}
+									/>
 
 									<div className='pl-4'>
 										<p className='text-5xl text-black font-light'>{stat.percent}</p>
 
-										<p className='mt-4 text-sm text-black font-extralight'>{stat.description}</p>
+										<p className='mt-4 text-base text-black font-extralight'>{stat.description}</p>
 									</div>
 								</motion.div>
 							))}
@@ -139,9 +142,9 @@ const Discover = () => {
 						<motion.a
 							variants={itemVariants}
 							href='#'
-							className='inline-flex items-center gap-2 text-blue-500 font-thin mt-4'
+							className='inline-flex items-center gap-2 text-blue-600 font-normal hover:text-blue-500 transition duration-300 mt-4'
 						>
-							Learn more <GoArrowUpRight className='text-blue-500' />
+							Learn more <GoArrowUpRight className='' />
 						</motion.a>
 					</div>
 				</motion.div>

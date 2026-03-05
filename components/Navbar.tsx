@@ -162,7 +162,7 @@ const Navbar = () => {
 						className={`hidden md:block px-6 py-2.5 rounded-lg text-sm font-extralight transition ${
 							isWhiteBg
 								? 'bg-blue-600 text-white hover:bg-blue-500'
-								: 'border border-white/60 text-white hover:bg-gray-800 duration-500 ease-in-out'
+								: 'border border-white/60 text-white bg-gray-800/40 hover:bg-black duration-500 ease-in-out'
 						}`}
 					>
 						Contact Us

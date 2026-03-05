@@ -65,16 +65,16 @@ const Functions = () => {
 
 					{/* Description + Button */}
 					<div className='flex flex-col md:flex-row md:items-center md:justify-between gap-6 w-full'>
-						<p className='text-white text-xl md:text-5xl max-w-5xl leading-tight font-light'>
+						<p className='text-white text-[clamp(2rem,2.5vw,6rem)]  leading-tight font-light'>
 							We work across the energy lifecycle to help bring projects into production with reliable performance and optimize
 							operations.
 						</p>
 
 						<a
-							href='#what-we-do'
+							href='/what-we-do'
 							className='inline-flex'
 						>
-							<button className='flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition'>
+							<button className='ml-4 flex whitespace-nowrap items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition'>
 								Explore Our Solutions
 							</button>
 						</a>
