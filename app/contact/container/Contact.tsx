@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import Container from '../../../components/Container';
+import HeroImage from '@/public/assets/Hero image.png';
 
 const Contact = () => {
 	// Animation variants
@@ -105,7 +106,7 @@ const Contact = () => {
 						>
 							{/* Main Image */}
 							<Image
-								src='assets/Hero image.png'
+								src={HeroImage}
 								alt='Solar energy installation'
 								fill
 								className='object-cover object-top-right'
