@@ -7,20 +7,18 @@ import Image from 'next/image';
 import KwoDraentLogoWhite from '../public/Kwodraent Logo White.png';
 import KwoDraentLogoBlack from '../public/KwodraentLogoBlack.png';
 import { usePathname } from 'next/navigation';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 const Navbar = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [visible, setVisible] = useState(true);
 	const [scrolled, setScrolled] = useState(false);
 
 	const pathname = usePathname();
-	const isHome = pathname === '/' || pathname === '/what-we-do' || pathname === '/who-we-are';
+	const isHome = pathname === '/' || pathname === '/what-we-do/' || pathname === '/who-we-are/';
 
 	const positionRef = useRef(0);
-
-	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-	const closeMenu = () => setIsMenuOpen(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -41,17 +39,14 @@ const Navbar = () => {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+			className={`fixed flex items-center justify-between top-0 left-0 w-full z-50 transition-all duration-500 ${
 				!visible ? '-translate-y-full' : 'translate-y-0'
 			} ${isWhiteBg ? 'bg-white shadow-xs shadow-gray-200 border-b border-gray-100' : 'bg-transparent border-b-[1px] border-[rgba(255,255,255,0.3)]'}`}
 		>
-			<Container>
+			<Container className='flex-1'>
 				<div className='flex items-center justify-between py-4'>
 					{/* Logo */}
-					<Link
-						href='/'
-						onClick={closeMenu}
-					>
+					<Link href='/'>
 						<Image
 							src={isWhiteBg ? KwoDraentLogoBlack : KwoDraentLogoWhite}
 							alt='kwodraent'
@@ -167,62 +162,70 @@ const Navbar = () => {
 					>
 						Contact Us
 					</Link>
-
-					{/* Mobile Toggle */}
-					<button
-						onClick={toggleMenu}
-						className='md:hidden flex flex-col cursor-pointer gap-1.5 mr-2'
-					>
-						<span className={`w-6 h-0.5 transition ${isWhiteBg ? 'bg-black' : 'bg-white'}`} />
-						<span className={`w-6 h-0.5 transition ${isWhiteBg ? 'bg-black' : 'bg-white'}`} />
-						<span className={`w-6 h-0.5 transition ${isWhiteBg ? 'bg-black' : 'bg-white'}`} />
-					</button>
 				</div>
 			</Container>
 
 			{/* Mobile Menu */}
-			<div
-				className={`md:hidden fixed inset-x-0 top-16 pb-28 bg-white shadow-lg transition-all duration-300 ${
-					isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-				}`}
-			>
-				<nav className='flex flex-col items-center gap-8 py-10'>
-					<Link
-						href='/who-we-are'
-						onClick={closeMenu}
-						className='font-medium text-gray-800 hover:text-blue-600 transition'
+			<div className='md:hidden'>
+				<Sheet>
+					<SheetTrigger asChild>
+						<button className='p-4 cursor-pointer'>
+							<Menu className={`h-6 w-6 ${isWhiteBg ? 'text-black' : 'text-white'}`} />
+						</button>
+					</SheetTrigger>
+
+					<SheetContent
+						side='right'
+						className='w-full max-w-[400px]'
 					>
-						Who We Are
-					</Link>
-					<Link
-						href='/what-we-do'
-						onClick={closeMenu}
-						className='font-medium text-gray-800 hover:text-blue-600 transition'
-					>
-						What We Do
-					</Link>
-					<Link
-						href='/subsidiaries'
-						onClick={closeMenu}
-						className='font-medium text-gray-800 hover:text-blue-600 transition'
-					>
-						Subsidiaries
-					</Link>
-					<Link
-						href='/partnerships'
-						onClick={closeMenu}
-						className='font-medium text-gray-800 hover:text-blue-600 transition'
-					>
-						Partnerships
-					</Link>
-					<Link
-						href='/contact'
-						onClick={closeMenu}
-						className='w-full max-w-60 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-center text-white transition duration-300 rounded-lg'
-					>
-						Contact Us
-					</Link>
-				</nav>
+						<nav className='flex flex-col items-center gap-8 pt-16'>
+							<SheetClose asChild>
+								<Link
+									href='/who-we-are'
+									className='font-normal text-gray-800 hover:text-blue-600 transition'
+								>
+									Who We Are
+								</Link>
+							</SheetClose>
+
+							<SheetClose asChild>
+								<Link
+									href='/what-we-do'
+									className='font-normal text-gray-800 hover:text-blue-600 transition'
+								>
+									What We Do
+								</Link>
+							</SheetClose>
+
+							<SheetClose asChild>
+								<Link
+									href='/subsidiaries'
+									className='font-normal text-gray-800 hover:text-blue-600 transition'
+								>
+									Subsidiaries
+								</Link>
+							</SheetClose>
+
+							<SheetClose asChild>
+								<Link
+									href='/partnerships'
+									className='font-normal text-gray-800 hover:text-blue-600 transition'
+								>
+									Partnerships
+								</Link>
+							</SheetClose>
+
+							<SheetClose asChild>
+								<Link
+									href='/contact'
+									className='w-full max-w-60 px-6 py-3 bg-blue-600 text-white text-center rounded-lg'
+								>
+									Contact Us
+								</Link>
+							</SheetClose>
+						</nav>
+					</SheetContent>
+				</Sheet>
 			</div>
 		</header>
 	);
