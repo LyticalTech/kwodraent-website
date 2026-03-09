@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GoNorthStar } from 'react-icons/go';
 import KwodraentLogo from '@/public/assets/companies_logos/Kwo Draent Energy Darkmode.png';
-import XastraLogo from '@/public/assets/companies_logos/Xastra Darkmode.png';
+import XastraLogo from '@/public/assets/companies_logos/Xastra White.png';
 import SchisteLogo from '@/public/assets/companies_logos/SchisteDarkmode (1).png';
 import LedenLogo from '@/public/assets/companies_logos/Leden Energy Darkmode.png';
 import LyticalLogo from '@/public/assets/companies_logos/Lytical Darkmode.png';
@@ -15,7 +15,7 @@ const cards = [
 	{
 		id: 1,
 		icon: KwodraentLogo,
-		title: 'Kwodraent Oil & Gas Limited',
+		title: 'Kwo Draent Energy Consults Limited',
 		subtitle: 'Strategic Energy Partnerships',
 		description: 'A strategic energy platform for asset development, EPC consortia, vessel, and rig supply.',
 		image: '/assets/KD group 1.png',
@@ -34,8 +34,8 @@ const cards = [
 	{
 		id: 3,
 		icon: SchisteLogo,
-		title: 'Schiste Intergrated Energy Services',
-		subtitle: 'Marine Operattions & Training',
+		title: 'Schiste Integrated Energy Services',
+		subtitle: 'Marine Operations & Training',
 		description: 'Marine-focused energy services, manpower, and training support company',
 		image: '/assets/KD group 3.png',
 		link: '/',
@@ -55,7 +55,7 @@ const cards = [
 		title: 'Lytical Technologies Limited',
 		subtitle: 'Flagship IT & Digital Solutions',
 		description: 'Delivering scalable software platforms, high-performance database systems, and end-to-end IT solutions.',
-		image: '/assets/KD group 5.png',
+		image: '/assets/Lytical Card Image.png',
 		link: '/',
 	},
 	{
@@ -80,7 +80,7 @@ const Subsidaries = () => {
 						The Kwo Draent Group
 					</h1>
 
-					<p className='text-white max-w-5xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-[1.5]'>
+					<p className='text-white font-light max-w-5xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-[1.5]'>
 						The Kwo Draent Group brings together technology, operations, manpower, marine services, asset development, and
 						strategic partnerships. Together, our companies move energy opportunities from origination to execution, across Africa
 						and beyond.
@@ -103,7 +103,7 @@ const Subsidaries = () => {
 								src={card.image}
 								alt={card.subtitle}
 								fill
-								className='object-cover opacity-40 group-hover:opacity-100 transition duration-300'
+								className='object-cover opacity-30 group-hover:opacity-100 transition duration-300'
 							/>
 
 							{/* BLACK OVERLAY ON HOVER */}

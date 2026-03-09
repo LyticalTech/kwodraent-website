@@ -89,7 +89,7 @@ const Navbar = () => {
 								>
 									<DropdownMenuItem asChild>
 										<Link
-											href='/who-we-are'
+											href='/who-we-are/'
 											className='text-white hover:text-gray-300  px-4 py-3'
 										>
 											About Us
@@ -97,7 +97,7 @@ const Navbar = () => {
 									</DropdownMenuItem>
 									<DropdownMenuItem asChild>
 										<Link
-											href='/who-we-are'
+											href='/who-we-are/'
 											className='text-white hover:text-gray-300  px-4 py-3'
 										>
 											Values
@@ -124,7 +124,7 @@ const Navbar = () => {
 						</div>
 
 						<Link
-							href='/what-we-do'
+							href='/what-we-do/'
 							className={`text-[15px] font-extralight transition ${
 								isWhiteBg ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-gray-300'
 							}`}
@@ -181,7 +181,7 @@ const Navbar = () => {
 						<nav className='flex flex-col items-center gap-8 pt-16'>
 							<SheetClose asChild>
 								<Link
-									href='/who-we-are'
+									href='/who-we-are/'
 									className='font-normal text-gray-800 hover:text-blue-600 transition'
 								>
 									Who We Are
@@ -190,7 +190,7 @@ const Navbar = () => {
 
 							<SheetClose asChild>
 								<Link
-									href='/what-we-do'
+									href='/what-we-do/'
 									className='font-normal text-gray-800 hover:text-blue-600 transition'
 								>
 									What We Do
