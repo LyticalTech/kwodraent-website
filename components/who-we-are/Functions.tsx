@@ -8,7 +8,7 @@ const cards = [
 		hoverText: 'Advancing energy assets from early concept through structured, investment-ready development.',
 	},
 	{
-		title: 'Enineering, Procurement & Construction',
+		title: 'Engineering, Procurement & Construction',
 		number: 2,
 		hoverText: 'Delivering integrated engineering, procurement, and construction aligned to requirements.',
 	},
@@ -82,7 +82,7 @@ const Functions = () => {
 				</div>
 
 				{/* 3x3 Card Grid */}
-				<div className='px-4 py-8 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
+				<div className='px-4 py-8 w-full grid grid-auto-fit-xl mt-12'>
 					{cards.map((card) => (
 						<a
 							key={card.number}
@@ -98,21 +98,21 @@ const Functions = () => {
 							/>
 
 							{/* Overlay for better text readability */}
-							<div className='absolute inset-0 bg-black/40 group-hover:bg-blue-700/80 transition-all duration-300 ' />
+							<div className='absolute inset-0 bg-black/40 md:group-hover:bg-blue-700/80 transition-all duration-300 ' />
 
 							{/* Card content */}
 							<div className='relative flex flex-col justify-between h-full p-6 z-10'>
 								{/* Top row */}
 								<div className='flex justify-between items-start'>
 									<h3 className='text-lg  text-white font-extralight'>{card.title}</h3>
-									<button className='border-2 border-white text-white px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 font-thin'>
+									<button className='border-2 border-white text-white px-3 py-1 rounded-full md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 font-thin'>
 										Service
 									</button>
 								</div>
 
 								{/* Bottom row */}
 								<div className='flex justify-between items-end'>
-									<p className='text-base max-w-50 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 font-thin'>
+									<p className='text-base max-w-50 text-white md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 font-thin'>
 										{card.hoverText}
 									</p>
 									<span className='text-base font-bold text-white font-extralight'>({card.number})</span>

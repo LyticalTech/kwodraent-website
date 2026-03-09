@@ -15,7 +15,7 @@ const slides = [
 		logo: PotentisLogo,
 		title: 'Potentis Energy',
 		companyTitle: 'Potentis Energy',
-		desc: 'Potentis Energy Limited is our Namibia-based joint venture partiner supporting emerging energy initiatives in Southern Africa. Through shared expertise, regional knowledge, and alighned execution, we collaborate to unlock scalable, sustainable energy opportunities.',
+		desc: 'Potentis Energy Limited is our Namibia-based joint venture partner supporting emerging energy initiatives in Southern Africa. Through shared expertise, regional knowledge, and aligned execution, we collaborate to unlock scalable, sustainable energy opportunities.',
 	},
 	{
 		id: 'meta_mincrest',

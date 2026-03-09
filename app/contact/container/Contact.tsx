@@ -129,17 +129,17 @@ const Contact = () => {
 							</motion.h1>
 
 							<motion.h2
-								className='mt-4 text-[clamp(3rem,4.8vw,3rem)] mb-4 sm:mb-6 leading-tight'
+								className='text-[clamp(2.6rem,3.8vw,6rem)] font-mediu text-gray-800 leading-[1.1] tracking-tight'
 								variants={fadeInUpVariants}
 							>
-								Let&apos;s Talk About Your Solar Future
+								Start the conversation that moves your project forward
 							</motion.h2>
 
 							<motion.p
-								className='text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed'
+								className='mt-4 text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed'
 								variants={fadeInUpVariants}
 							>
-								Join over 100 companies using clean, affordable energy from Energy Max. Contact our team for a free assessment.
+								Connect with Kwo Draent to explore how we can support your project from concept to delivery.
 							</motion.p>
 
 							{/* Form */}

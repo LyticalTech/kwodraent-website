@@ -7,8 +7,8 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import WhoWeAreOne from '@/public/assets/whoWeAre1.jpg';
 import WhoWeAreTwo from '@/public/assets/whoWeAre2.jpg';
-import WhoWeAreThree from '@/public/assets/whoWeAre3.jpg';
-import WhoWeAreFour from '@/public/assets/whoWeAre4.jpg';
+import WhoWeAreThree from '@/public/assets/Supply Chain Image.png';
+import WhoWeAreFour from '@/public/assets/Digital Pillar Image.png';
 import type { StaticImageData } from 'next/image';
 
 type ServiceItem = {
