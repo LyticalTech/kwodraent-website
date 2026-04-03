@@ -7,6 +7,7 @@ import PotentisLogo from '@/public/assets/potentislightModeLogo-removebg-preview
 import MetaMincrestLogo from '@/public/assets/metaMincrestLightModeLogo-removebg-preview.png';
 
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
+import Link from 'next/link';
 
 const slides = [
 	{
@@ -16,6 +17,7 @@ const slides = [
 		title: 'Potentis Energy',
 		companyTitle: 'Potentis Energy',
 		desc: 'Potentis Energy Limited is our Namibia-based joint venture partner supporting emerging energy initiatives in Southern Africa. Through shared expertise, regional knowledge, and aligned execution, we collaborate to unlock scalable, sustainable energy opportunities.',
+		link: '/',
 	},
 	{
 		id: 'meta_mincrest',
@@ -24,6 +26,7 @@ const slides = [
 		title: 'Meta Mincrest',
 		companyTitle: 'Meta Mincrest',
 		desc: 'Meta Mincrest is Our United States-based partner working alongside Kwodraent to originate and advance Africa-linked opportunities. Together, we combine global networks and local insights to identify, structure, and mature high-potential ventures across key markets.',
+		link: 'https://ww.metamincrest.com/',
 	},
 ];
 
@@ -95,19 +98,25 @@ const Hero = () => {
 										/>
 
 										{/* overlay */}
-										<div className='absolute inset-0 flex items-center justify-end px-6 md:px-16'>
-											<div className='bg-white max-w-md p-8 rounded-2xl shadow-xl border-t-8 border-blue-600'>
-												<Image
-													src={slide.logo}
-													alt={slide.title}
-													width={150}
-													height={40}
-													className='mb-4'
-												/>
-												<h1 className='text-2xl font-normal text-gray-800 mb-2'>{slide.title}</h1>
-												<p className='text-gray-600 text-sm font-normal'>{slide.desc}</p>
+										<Link
+											href={slide.link}
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											<div className='absolute inset-0 flex items-center justify-end px-6 md:px-16'>
+												<div className='bg-white max-w-md p-8 rounded-2xl shadow-xl border-t-8 border-blue-600'>
+													<Image
+														src={slide.logo}
+														alt={slide.title}
+														width={150}
+														height={40}
+														className='mb-4'
+													/>
+													<h1 className='text-2xl font-normal text-gray-800 mb-2'>{slide.title}</h1>
+													<p className='text-gray-600 text-sm font-normal'>{slide.desc}</p>
+												</div>
 											</div>
-										</div>
+										</Link>
 									</div>
 								</CarouselItem>
 							))}
