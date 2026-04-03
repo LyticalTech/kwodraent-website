@@ -29,7 +29,7 @@ const cards = [
 		description:
 			'Oil and gas support services covering manpower supply, supply chain optimization, and commercial support for project delivery.',
 		image: '/KD group 2.webp',
-		link: '/',
+		link: 'https://www.xastrang.com/',
 	},
 	{
 		id: 3,
@@ -38,7 +38,7 @@ const cards = [
 		subtitle: 'Marine Operations & Training',
 		description: 'Marine-focused energy services, manpower, and training support company',
 		image: '/assets/KD group 3.png',
-		link: '/',
+		link: 'https://www.schiste.com.ng/',
 	},
 	{
 		id: 4,
@@ -52,11 +52,11 @@ const cards = [
 	{
 		id: 5,
 		icon: LyticalLogo,
-		title: 'Lytical Technologies Limited',
+		title: 'Lytical Technology Limited',
 		subtitle: 'Flagship IT & Digital Solutions',
 		description: 'Delivering scalable software platforms, high-performance database systems, and end-to-end IT solutions.',
 		image: '/assets/Lytical Card Image.png',
-		link: '/',
+		link: 'https://www.lyticaltechnology.com/',
 	},
 	{
 		id: 6,
@@ -65,7 +65,7 @@ const cards = [
 		subtitle: 'High-Value Projects & Asset Development',
 		description: 'High-value projects, asset acquisition, and complex energy developments.',
 		image: '/assets/KD group 6.jpg',
-		link: '/',
+		link: 'https://www.swapssynergy.com/',
 	},
 ];
 
@@ -96,6 +96,8 @@ const Subsidaries = () => {
 						<Link
 							key={card.id}
 							href={card.link}
+							target='_blank'
+							rel='noopener noreferrer'
 							className='relative group rounded-xl overflow-hidden border border-gray-800 bg-neutral-900 p-6 flex flex-col items-start gap-4 transition duration-200'
 						>
 							{/* IMAGE (VISIBLE BY DEFAULT) */}
